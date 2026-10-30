@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Soal UKT Jabatan Fungsional DJP 2026 — Paket 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --primary-dark: #1e40af;
+      --accent: #f59e0b;
+      --accent-light: #fef3c7;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius: 12px;
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --primary-light: #1e293b;
+      --primary-dark: #93c5fd;
+      --accent: #fbbf24;
+      --accent-light: #312e81;
+      --success: #10b981;
+      --success-light: #064e3b;
+      --danger: #f87171;
+      --danger-light: #7f1d1d;
+      --bg: #0b0f17;
+      --surface: #151d2c;
+      --surface-alt: #1c2638;
+      --border: #283548;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+      --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Mode Pill Switcher */
+    .mode-switcher {
+      display: inline-flex;
+      background: var(--surface-alt);
+      padding: 4px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .mode-btn {
+      padding: 0.45rem 1rem;
+      border-radius: 24px;
+      border: none;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      background: transparent;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .mode-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .icon-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .icon-btn:hover {
+      background: var(--surface-alt);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* Info Banner */
+    .banner {
+      background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(14,165,233,0.04) 100%);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .banner-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .banner-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      max-width: 750px;
+    }
+
+    .banner-chips {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .chip-blue { background: #dbeafe; color: #1e40af; }
+    .chip-purple { background: #f3e8ff; color: #6b21a8; }
+    .chip-amber { background: #fef3c7; color: #92400e; }
+    .chip-green { background: #dcfce7; color: #166534; }
+
+    [data-theme="dark"] .chip-blue { background: #1e3a8a; color: #bfdbfe; }
+    [data-theme="dark"] .chip-purple { background: #581c87; color: #e9d5ff; }
+    [data-theme="dark"] .chip-amber { background: #78350f; color: #fde68a; }
+    [data-theme="dark"] .chip-green { background: #14532d; color: #bbf7d0; }
+
+    /* Filter & Search Bar */
+    .filter-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-input-wrap svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.55rem 0.85rem 0.55rem 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+      background: var(--surface);
+    }
+
+    .filters-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .select-custom {
+      padding: 0.55rem 2rem 0.55rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.65rem center;
+      background-size: 1em;
+    }
+
+    .btn {
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      border: none;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+
+    .btn-secondary {
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background: var(--border);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+    .btn-success:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #78350f;
+    }
+
+    /* CBT View Layout */
+    .cbt-container {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 992px) {
+      .cbt-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Question Card */
+    .question-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    .q-number-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .q-meta-badges {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: var(--surface-alt);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .meta-tag.difficulty-mudah {
+      background: var(--success-light);
+      color: #065f46;
+      border-color: transparent;
+    }
+    .meta-tag.difficulty-sulit {
+      background: var(--accent-light);
+      color: #92400e;
+      border-color: transparent;
+    }
+
+    .q-topic {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .q-topic strong {
+      color: var(--text);
+    }
+
+    .q-text {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      white-space: pre-line;
+    }
+
+    /* Options List */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 0.9rem 1.15rem;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .option-item:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .option-item.selected {
+      border-color: var(--primary);
+      background: rgba(37, 99, 235, 0.08);
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    /* Result Review Styling */
+    .option-item.is-correct {
+      border-color: var(--success) !important;
+      background: rgba(16, 185, 129, 0.12) !important;
+      box-shadow: 0 0 0 2px var(--success) !important;
+    }
+
+    .option-item.is-wrong {
+      border-color: var(--danger) !important;
+      background: rgba(239, 68, 68, 0.1) !important;
+      box-shadow: 0 0 0 2px var(--danger) !important;
+    }
+
+    .opt-letter {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 8px;
+      background: var(--surface-alt);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.9rem;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .option-item.selected .opt-letter {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .option-item.is-correct .opt-letter {
+      background: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+
+    .option-item.is-wrong .opt-letter {
+      background: var(--danger);
+      color: white;
+      border-color: var(--danger);
+    }
+
+    .opt-text {
+      flex: 1;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      padding-top: 4px;
+    }
+
+    /* Explanation Box */
+    .explanation-box {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--surface-alt);
+      border-radius: 10px;
+      border-left: 4px solid var(--primary);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .exp-content {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--text);
+      white-space: pre-line;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-why-wrong {
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.88rem;
+    }
+
+    .exp-why-wrong h5 {
+      font-size: 0.85rem;
+      color: var(--danger);
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-ref {
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* CBT Bottom Nav Bar */
+    .cbt-nav-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Sidebar / Question Palette */
+    .cbt-sidebar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 80px;
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-header h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    /* Timer Widget */
+    .timer-card {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: white;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .timer-label {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .timer-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .timer-display.warning {
+      color: #f87171;
+      animation: pulse 1s infinite;
+    }
+
+    /* Progress Stats */
+    .progress-stats {
+      margin-bottom: 1.25rem;
+    }
+
+    .progress-bar-bg {
+      height: 8px;
+      background: var(--surface-alt);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Number Grid */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.45rem;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    .num-btn {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    .num-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .num-btn.active {
+      box-shadow: 0 0 0 2px var(--text);
+      font-weight: 800;
+    }
+
+    .num-btn.answered {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .num-btn.doubtful {
+      background: var(--accent);
+      color: #78350f;
+      border-color: var(--accent);
+    }
+
+    .num-btn.review-correct {
+      background: var(--success) !important;
+      color: white !important;
+      border-color: var(--success) !important;
+    }
+
+    .num-btn.review-wrong {
+      background: var(--danger) !important;
+      color: white !important;
+      border-color: var(--danger) !important;
+    }
+
+    .legend {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+
+    /* Study Mode Cards List */
+    .study-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .study-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 540px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+      text-align: center;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: scale(1);
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), #38bdf8);
+      color: white;
+      box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+    }
+
+    .score-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .score-denom {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .score-breakdown {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .score-stat {
+      background: var(--surface-alt);
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+
+    .score-stat .val {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .score-stat .lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Print Styles */
+    @media print {
+      header, .banner, .filter-bar, .cbt-sidebar, .cbt-nav-controls, .nav-actions, .mode-switcher {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .question-card, .study-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        margin-bottom: 2rem;
+      }
+      .explanation-box {
+        display: block !important;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-logo">UKT</div>
+        <div class="brand-text">
+          <h1>Bank Soal UKT DJP 2026</h1>
+          <span>Paket 1 · 60 Soal Pilihan Ganda</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Switch Mode -->
+        <div class="mode-switcher">
+          <button class="mode-btn active" id="btn-mode-cbt" onclick="setAppMode('cbt')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Mode Ujian CBT
+          </button>
+          <button class="mode-btn" id="btn-mode-study" onclick="setAppMode('study')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            Mode Belajar & Kunci
+          </button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" title="Ubah Tema Gelap / Terang">
+          <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg id="theme-icon-moon" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Print Button -->
+        <button class="icon-btn" onclick="window.print()" title="Cetak / Simpan PDF">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Banner Info -->
+    <div class="banner">
+      <div>
+        <div class="banner-title">Uji Kompetensi Teknis (UKT) Pengisian Jabatan Fungsional DJP 2026</div>
+        <div class="banner-desc">Format ujian: 60 soal pilihan ganda · Waktu pengerjaan 90 menit · Tanpa sistem minus · Nilai dikonversi 0–100. Acuan materi: PMK-111/2025, PP-20/2026, PMK-81/2024, PMK-15/2025, SE-05/PJ/2022, dll.</div>
+      </div>
+      <div class="banner-chips">
+        <span class="chip chip-blue">⏱️ 90 Menit</span>
+        <span class="chip chip-green">🟢 10 Soal Mudah</span>
+        <span class="chip chip-amber">🟠 50 Soal Kasus</span>
+        <span class="chip chip-purple">📋 7 Unit Kompetensi</span>
+      </div>
+    </div>
+
+    <!-- Filter & Search Bar (Active in Study Mode) -->
+    <div class="filter-bar" id="study-filter-bar" style="display: none;">
+      <div class="search-input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-input" id="search-box" placeholder="Cari kata kunci, topik, regulasi, dasar hukum..." oninput="filterStudyQuestions()">
+      </div>
+
+      <div class="filters-group">
+        <select class="select-custom" id="filter-unit" onchange="filterStudyQuestions()">
+          <option value="">Semua Unit Kompetensi</option>
+          <option value="1. Advokasi Kebijakan Perpajakan">1. Advokasi Kebijakan (Soal 1-10)</option>
+          <option value="2. Analisis Potensi Pajak">2. Analisis Potensi Pajak (Soal 11-19)</option>
+          <option value="3. Analisis Kepatuhan Wajib Pajak">3. Analisis Kepatuhan WP (Soal 20-28)</option>
+          <option value="4. Profiling Wajib Pajak">4. Profiling Wajib Pajak (Soal 29-35)</option>
+          <option value="5. Ekstensifikasi Perpajakan">5. Ekstensifikasi Perpajakan (Soal 36-46)</option>
+          <option value="6. Pemeriksaan Pajak">6. Pemeriksaan Pajak (Soal 47-53)</option>
+          <option value="7. Analis Profil Risiko Wajib Pajak">7. Analis Profil Risiko WP (Soal 54-60)</option>
+        </select>
+
+        <select class="select-custom" id="filter-difficulty" onchange="filterStudyQuestions()">
+          <option value="">Semua Tingkat</option>
+          <option value="Mudah">Mudah (Konsep)</option>
+          <option value="Sulit">Sulit (Kasus)</option>
+        </select>
+
+        <button class="btn btn-secondary" onclick="toggleAllExplanations()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span id="toggle-all-exp-txt">Buka Semua Kunci</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CBT MODE VIEW -->
+    <div id="cbt-view" class="cbt-container">
+      <!-- Main Question Area -->
+      <div class="cbt-main">
+        <div class="question-card" id="current-question-card">
+          <!-- Dynamic Question will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Sidebar Area -->
+      <div class="cbt-sidebar">
+        <!-- Timer -->
+        <div class="timer-card">
+          <div>
+            <div class="timer-label">Sisa Waktu</div>
+            <div class="timer-display" id="timer-display">90:00</div>
+          </div>
+          <button class="icon-btn" id="btn-timer-pause" onclick="toggleTimer()" style="background: rgba(255,255,255,0.15); border: none; color: white;" title="Jeda / Lanjutkan Waktu">
+            <svg id="timer-pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            <svg id="timer-play-icon" style="display:none;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </button>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-stats">
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div class="progress-labels">
+            <span>Terjawab: <strong id="stat-answered">0</strong> / 60</span>
+            <span id="stat-percentage">0%</span>
+          </div>
+        </div>
+
+        <!-- Number Grid -->
+        <div class="sidebar-header">
+          <h3>Navigasi Soal</h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted);" id="review-mode-badge"></span>
+        </div>
+
+        <div class="palette-grid" id="palette-grid">
+          <!-- 60 buttons generated by JS -->
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background: var(--primary);"></div>
+            <span>Sudah Dijawab</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: var(--accent);"></div>
+            <span>Ragu-ragu</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: var(--surface-alt); border: 1px solid var(--border);"></div>
+            <span>Belum Dijawab</span>
+          </div>
+        </div>
+
+        <!-- Finish Exam Button -->
+        <div style="margin-top: 1.25rem;">
+          <button class="btn btn-success" style="width: 100%; justify-content: center; padding: 0.75rem;" onclick="confirmFinishExam()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Selesaikan Ujian
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDY MODE VIEW -->
+    <div id="study-view" class="study-list" style="display: none;">
+      <!-- Generated by JS -->
+    </div>
+  </main>
+
+  <!-- RESULT / SCORE MODAL -->
+  <div class="modal-overlay" id="result-modal">
+    <div class="modal-box">
+      <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text);">Hasil Ujian Simulasi UKT</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Simulasi Paket 1 — Pengisian Jabatan Fungsional DJP 2026</p>
+
+      <div class="score-circle">
+        <div class="score-number" id="modal-score">0</div>
+        <div class="score-denom">Nilai Akhir (0-100)</div>
+      </div>
+
+      <div class="score-breakdown">
+        <div class="score-stat">
+          <div class="val" style="color: var(--success);" id="modal-correct">0</div>
+          <div class="lbl">Benar</div>
+        </div>
+        <div class="score-stat">
+          <div class="val" style="color: var(--danger);" id="modal-wrong">0</div>
+          <div class="lbl">Salah</div>
+        </div>
+        <div class="score-stat">
+          <div class="val" style="color: var(--text-muted);" id="modal-empty">0</div>
+          <div class="lbl">Kosong</div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.5rem;">
+        <button class="btn btn-primary" onclick="closeModalAndReview()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Review Jawaban & Pembahasan
+        </button>
+        <button class="btn btn-secondary" onclick="resetExam()">
+          Ulangi Ujian
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMBEDDED QUESTIONS DATA -->
+  <script>
+    const questionsData = [
+  {
+    "number": 1,
+    "id": "P1-001",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Pembukuan vs pencatatan (PMK-54/2021 jo. PMK-81/2024)",
+    "difficulty": "Mudah",
+    "question": "Tuan Arif mulai terdaftar sebagai Wajib Pajak orang pribadi pada 10 Februari 2026 dan menjalankan usaha bengkel dengan perkiraan peredaran bruto Rp3 miliar setahun. Sampai dengan 31 Desember 2026, Tuan Arif tidak pernah menyampaikan pemberitahuan penggunaan Norma Penghitungan Penghasilan Neto (NPPN). Konsekuensi yang paling tepat adalah ...",
+    "options": {
+      "A": "Tuan Arif tetap boleh menggunakan NPPN karena peredaran brutonya di bawah Rp4,8 miliar",
+      "B": "KPP menetapkan penggunaan NPPN secara jabatan karena WP tidak menyampaikan pilihan",
+      "C": "Tuan Arif dianggap memilih menyelenggarakan pembukuan untuk Tahun Pajak 2026 dst.",
+      "D": "Tuan Arif cukup melakukan pencatatan tanpa pemberitahuan karena masih WP baru terdaftar"
+    },
+    "answerKey": "C",
+    "explanation": "WP OP yang melakukan kegiatan usaha/pekerjaan bebas dengan peredaran bruto < Rp4,8 miliar memang **boleh** melakukan pencatatan dan menghitung penghasilan neto dengan NPPN, tetapi **wajib memberitahukan** penggunaan NPPN kepada Dirjen Pajak. Bagi WP baru terdaftar, pemberitahuan paling lambat 3 bulan sejak terdaftar atau akhir Tahun Pajak, mana yang lebih dahulu (dalam kasus ini: 10 Mei 2026). Karena tidak memberitahukan, Tuan Arif **dianggap memilih menyelenggarakan pembukuan**.",
+    "whyOthersWrong": "- A — Batas Rp4,8 miliar adalah syarat *boleh*, bukan otomatis; tanpa pemberitahuan hak NPPN gugur.\n- B — Tidak ada mekanisme \"NPPN secara jabatan\" sebagai akibat tidak memberitahu; NPPN jabatan hanya dipakai dalam penghitungan secara jabatan (Pasal 14 ayat (5) UU PPh) bila pembukuan tidak dapat dipercaya/tidak lengkap.\n- D — Pencatatan tanpa pemberitahuan hanya untuk WP OP kriteria tertentu yang seluruh peredaran brutonya dikenai PPh final dan/atau bukan objek pajak dan ≤ Rp4,8 miliar; usaha bengkel Tuan Arif tidak dinyatakan seluruhnya final.",
+    "references": "Pasal 28 UU KUP; Pasal 14 UU PPh; PMK-54/PMK.03/2021 sebagaimana disesuaikan PMK-81/2024 (bahan paparan hlm. 641–642)."
+  },
+  {
+    "number": 2,
+    "id": "P1-002",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Saat wajib lapor usaha & mulai kewajiban PKP (PMK-164/2023)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "CV Sinar Abadi (tahun buku Januari–Desember) bergerak di perdagangan bahan bangunan. Akumulasi peredaran bruto CV tersebut melewati Rp4,8 miliar pada bulan September 2025. Dalam konseling dengan AR pada November 2025, pengurus CV bertanya kapan paling lambat harus melapor untuk dikukuhkan sebagai PKP dan sejak kapan wajib memungut PPN. Jawaban AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Paling lambat akhir Oktober 2025 dan wajib memungut PPN sejak Masa Pajak Oktober 2025, yaitu bulan berikutnya setelah batas terlampaui",
+      "B": "Paling lambat 31 Desember 2025; kewajiban memungut, menyetor, dan melapor PPN dimulai sejak tanggal SPPKP diterbitkan",
+      "C": "Paling lambat 31 Desember 2025; secara default kewajiban PPN dimulai Masa Januari 2026, kecuali CV memilih memulai lebih awal melalui pemberitahuan",
+      "D": "Paling lambat 31 Januari 2026, dan kewajiban memungut dimulai Masa Februari 2026 setelah permohonan diproses KPP"
+    },
+    "answerKey": "C",
+    "explanation": "Berdasarkan PMK-68/2010 s.t.d.d. PMK-164/2023, pengusaha yang peredaran brutonya melewati batasan pengusaha kecil (Rp4,8 miliar) **wajib melaporkan usahanya paling lambat akhir tahun buku** saat batas terlampaui (31 Desember 2025). Pada ketentuan baru, **saat terbit SPPKP ≠ saat mulai kewajiban**. Secara *default* hak dan kewajiban sebagai PKP dimulai **Masa Pajak pertama tahun buku berikutnya** (Januari 2026), namun pengusaha **dapat memilih** memulai lebih awal dengan menyampaikan pemberitahuan masa pajak mulai memungut bersamaan dengan permohonan pengukuhan. Ini disebut *grace period* bagi pengusaha yang baru melampaui threshold.",
+    "whyOthersWrong": "- A — Ketentuan \"akhir bulan berikutnya\" adalah rezim lama (PMK-197/2013 jo. PMK-68/2010 sebelum perubahan).\n- B — Rezim lama: saat SPPKP terbit = saat mulai kewajiban. Pada PMK-164/2023 keduanya dipisahkan.\n- D — Tidak ada dasar perpanjangan sampai Januari tahun berikutnya.",
+    "references": "Pasal 2 ayat (2) UU KUP; PMK-197/PMK.03/2013; PMK-164/2023 (bahan paparan hlm. 108–110)."
+  },
+  {
+    "number": 3,
+    "id": "P1-003",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Kriteria peredaran bruto WP PBT – PP 20/2026",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Tuan Bram (WP OP dalam negeri) pada Tahun Pajak 2026 memiliki penghasilan:\n1. usaha toko sembako: peredaran bruto Rp2,1 miliar;\n2. usaha jasa konstruksi (dikenai PPh final jasa konstruksi): Rp2,0 miliar;\n3. jasa konsultan manajemen sebagai pekerjaan bebas: Rp1,0 miliar.\n\nTuan Bram menghitung PPh atas toko sembako dengan tarif final 0,5% karena \"omzet tokonya hanya Rp2,1 miliar\". Berdasarkan PP 20 Tahun 2026, analisis AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Benar, karena kriteria WP PBT hanya dihitung dari peredaran bruto usaha yang dikenai PPh final 0,5%, yaitu Rp2,1 miliar",
+      "B": "Benar, karena jasa konstruksi sudah dikenai PPh final tersendiri dan jasa konsultan dikenai Pasal 17, sehingga keduanya tidak dihitung",
+      "C": "Tidak tepat; seluruh peredaran bruto usaha dan pekerjaan bebas (Rp5,1 miliar) dihitung untuk kriteria, sehingga omzet toko sembako dikenai tarif Pasal 17",
+      "D": "Tidak tepat; seluruh penghasilan Tuan Bram, termasuk jasa konstruksi, berubah menjadi dikenai tarif umum Pasal 17 UU PPh"
+    },
+    "answerKey": "C",
+    "explanation": "PP 20/2026 mengubah **Pasal 58**: besarnya peredaran bruto untuk kriteria subjek WP PBT adalah **jumlah keseluruhan peredaran bruto dari usaha dan pekerjaan bebas, baik yang dikenai PPh final maupun nonfinal, termasuk penghasilan dari luar negeri**. Total = 2,1 + 2,0 + 1,0 = **Rp5,1 miliar > Rp4,8 miliar** → Tuan Bram **bukan** WP PBT sehingga penghasilan toko sembako dikenai **tarif umum Pasal 17**. Ini analog dengan contoh \"Tuan B\" dalam bahan paparan (omzet keseluruhan Rp6 M → bukan WP PBT).",
+    "whyOthersWrong": "- A — Itu rumusan PP 55/2022 (rezim lama) yang justru diubah karena celah penghindaran.\n- B — Penghasilan final lain tetap dihitung untuk *kriteria* peredaran bruto, meskipun pajaknya tetap final tersendiri.\n- D — Penghasilan jasa konstruksi tetap dikenai PPh final jasa konstruksi (ketentuan tersendiri); yang berubah hanya perlakuan atas usaha yang semula 0,5%.",
+    "references": "PP 20/2026 Pasal 58 (bahan paparan hlm. 723, 729–731)."
+  },
+  {
+    "number": 4,
+    "id": "P1-004",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Subjek PPh final 0,5% – PP 20/2026",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Pada edukasi WP baru di KPP, terdapat empat WP badan dengan peredaran bruto Tahun Pajak 2026 di bawah Rp4,8 miliar:\n(1) CV Maju Jaya (baru terdaftar Januari 2026), (2) PT Perorangan milik Nn. Sari (didirikan 1 orang, usaha katering, terdaftar 2025), (3) Koperasi Tani Makmur (terdaftar sejak 2024), (4) Firma Lestari (baru terdaftar Februari 2026).\n\nBerdasarkan PP 20/2026, WP yang **masih dapat** memanfaatkan PPh final 0,5% pada Tahun Pajak 2026 adalah ...",
+    "options": {
+      "A": "(1), (2), (3), dan (4)",
+      "B": "(2) dan (3)",
+      "C": "(1) dan (4)",
+      "D": "(2) saja"
+    },
+    "answerKey": "B",
+    "explanation": "PP 20/2026 mengubah **Pasal 57 ayat (1)**: subjek PPh final 0,5% WP PBT hanya **WP orang pribadi** dan **WP badan berbentuk perseroan perorangan yang didirikan oleh 1 orang serta koperasi**. CV, firma, PT biasa, dan BUMDes tidak lagi menjadi subjek (sebagai sarana anti penghindaran pajak). CV Maju Jaya dan Firma Lestari baru terdaftar pada 2026 sehingga tidak memiliki surat keterangan/hak lama yang dilindungi ketentuan peralihan.\n- PT Perorangan Nn. Sari (2): subjek, dan jangka waktu 4 tahun bagi PT OP **dihapus** (Pasal 59) → masih bisa, sepanjang memenuhi kriteria (termasuk gabungan omzet dengan OP pemiliknya ≤ Rp4,8 M).\n- Koperasi (3): masih subjek, tetapi tetap dibatasi **4 Tahun Pajak sejak terdaftar** (Pasal 57 ayat (2) huruf f) → terdaftar 2024, Tahun Pajak 2026 adalah tahun ke-3 → masih bisa.",
+    "whyOthersWrong": "- A dan C — CV dan firma tidak lagi termasuk subjek PPh final 0,5% berdasarkan PP 20/2026.\n- D — Koperasi tetap subjek selama belum melewati 4 Tahun Pajak.",
+    "references": "PP 20/2026 Pasal 57 ayat (1), ayat (2) huruf b, e, f, Pasal 59 (bahan paparan hlm. 726–728, 732)."
+  },
+  {
+    "number": 5,
+    "id": "P1-005",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Pedoman pengkreditan PM 80% sebelum dikukuhkan PKP",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Dagang Nusa (tahun buku kalender) memiliki peredaran bruto Tahun 2023 sebesar Rp5,2 miliar namun tidak melaporkan usaha untuk dikukuhkan sebagai PKP. Pada 2025 PT Dagang Nusa dikukuhkan sebagai PKP secara jabatan. Penyerahan BKP selama Tahun 2024 (seluruhnya penyerahan biasa dengan tarif 11%) sebesar Rp6 miliar. Faktur pajak masukan atas pembelian 2024 sebesar Rp500 juta. PPN yang masih harus dibayar atas Tahun 2024 (belum termasuk sanksi) dengan menerapkan ketentuan yang paling menguntungkan dan sah bagi WP adalah ...",
+    "options": {
+      "A": "Rp660.000.000",
+      "B": "Rp160.000.000",
+      "C": "Rp132.000.000",
+      "D": "Rp0"
+    },
+    "answerKey": "C",
+    "explanation": "1. Karena omzet 2023 > Rp4,8 M, PT seharusnya PKP sejak Masa Pajak pertama tahun buku berikutnya (Januari 2024).\n2. Pajak Keluaran seharusnya dipungut 2024 = 11% × Rp6 M = **Rp660 juta** (DPP harga jual; tidak boleh nilai lain/besaran tertentu).\n3. Atas PM sebelum dikukuhkan, PKP dapat mengkreditkan PM dengan **pedoman 80% dari Pajak Keluaran** (Pasal 9 ayat (9a) UU PPN) = 80% × 660 juta = **Rp528 juta** — lebih menguntungkan daripada PM riil Rp500 juta. Faktur riil tidak dapat dikreditkan bersamaan karena PM dihitung dengan pedoman.\n4. PPN kurang bayar = 660 − 528 = **Rp132 juta**.",
+    "whyOthersWrong": "- A — Mengabaikan hak pengkreditan PM.\n- B — Menggunakan PM riil Rp500 juta; sah tetapi tidak paling menguntungkan dibanding pedoman 80% yang diberikan UU.\n- D — PPN terutang saat penyerahan (prinsip akrual) dan tetap ditagih walau tidak dipungut.",
+    "references": "Pasal 9 ayat (9a) UU PPN s.t.d.t.d. UU HPP; PMK-18/2021 sebagaimana disesuaikan PMK-81/2024 (bahan paparan hlm. 163, 562)."
+  },
+  {
+    "number": 6,
+    "id": "P1-006",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "PPN Pasal 16D – aktiva yang PM-nya tidak dapat dikreditkan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Kertas Mulia (PKP pabrikan kertas) menjual dua aktiva bekas pada Maret 2026:\n(1) mobil sedan operasional direksi (bukan barang dagangan/bukan untuk disewakan), dan\n(2) mesin potong kertas yang dahulu dibeli dengan Faktur Pajak dan PM-nya telah dikreditkan.\n\nSaat penelitian SPT Masa PPN, AR menemukan WP tidak membuat faktur pajak untuk kedua penjualan tersebut. Kesimpulan AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Kedua penjualan terutang PPN Pasal 16D karena keduanya aktiva yang semula tidak untuk diperjualbelikan oleh PKP",
+      "B": "Hanya penjualan mesin yang terutang PPN Pasal 16D",
+      "C": "Hanya penjualan sedan yang terutang PPN karena sedan merupakan barang mewah yang dikenai PPN dan PPnBM",
+      "D": "Kedua penjualan tidak terutang PPN karena bukan kegiatan usaha utama PKP sebagai pabrikan kertas"
+    },
+    "answerKey": "B",
+    "explanation": "Pasal 16D UU PPN mengenakan PPN atas penyerahan aktiva yang menurut tujuan semula tidak untuk diperjualbelikan oleh PKP, **kecuali** atas aktiva yang PM-nya **tidak dapat dikreditkan** karena Pasal 9 ayat (8) huruf b (tidak berhubungan langsung dengan usaha) dan huruf c (perolehan/pemeliharaan sedan dan station wagon, kecuali barang dagangan/disewakan).\n- Sedan operasional: PM tidak dapat dikreditkan (Pasal 9 ayat (8) huruf c) → penjualannya **bukan objek** Pasal 16D.\n- Mesin: PM dapat dan telah dikreditkan → penjualannya **terutang PPN** (faktur kode 09). Potensi: PPN 16D atas mesin + STP denda faktur (Pasal 14 ayat (4) KUP).",
+    "whyOthersWrong": "- A — Mengabaikan pengecualian Pasal 9 ayat (8) huruf c.\n- C — Status \"mewah\" tidak relevan; yang relevan adalah dapat tidaknya PM dikreditkan.\n- D — Pasal 16D justru mengatur penyerahan di luar kegiatan usaha utama.",
+    "references": "Pasal 16D jo. Pasal 9 ayat (8) huruf b dan c UU PPN (bahan paparan hlm. 112)."
+  },
+  {
+    "number": 7,
+    "id": "P1-007",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "PPN Kegiatan Membangun Sendiri (KMS)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dari Kegiatan Pengumpulan Data Lapangan (KPDL) tahun 2024, AR menemukan Ny. Lina (bukan PKP) membangun rumah tinggal 2 lantai dengan luas bangunan 250 m² di atas tanah miliknya. Pembangunan dimulai Maret 2024 dan selesai Desember 2024. Total biaya pembangunan Rp1,2 miliar, termasuk harga tanah tambahan Rp200 juta yang dibeli untuk perluasan pekarangan. Ny. Lina belum pernah menyetor PPN KMS. Potensi PPN KMS yang tepat adalah ...",
+    "options": {
+      "A": "Rp132.000.000",
+      "B": "Rp26.400.000",
+      "C": "Rp22.000.000",
+      "D": "Rp0"
+    },
+    "answerKey": "C",
+    "explanation": "Berdasarkan Pasal 16C UU PPN jo. PMK-61/PMK.03/2022, KMS terutang PPN jika luas bangunan **≥ 200 m²**, dilakukan tidak dalam kegiatan usaha, dan hasilnya digunakan sendiri atau pihak lain. DPP = **20% × biaya pembangunan (tidak termasuk harga perolehan tanah)**.\n- Biaya tanpa tanah = 1,2 M − 0,2 M = Rp1 miliar.\n- PPN = 20% × 11% × Rp1 M = **Rp22.000.000** (tarif 2024 = 11%, efektif 2,2%).\nSaat terutang: sejak mulai dibangun s.d. selesai; tempat terutang: lokasi bangunan.",
+    "whyOthersWrong": "- A — Menggunakan tarif 11% atas seluruh biaya tanpa DPP 20% dan masih memasukkan tanah.\n- B — Memasukkan harga tanah ke dalam DPP.\n- D — Justru KMS dikenakan atas bangunan yang digunakan sendiri.",
+    "references": "Pasal 16C UU PPN; PMK-61/PMK.03/2022 (bahan paparan hlm. 112)."
+  },
+  {
+    "number": 8,
+    "id": "P1-008",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "SPOP PBB P5L – penyampaian, teguran, tindak lanjut",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Sawit Hijau (objek PBB sektor perkebunan) menerima SPOP elektronik pada 1 Februari 2026. Sampai batas waktu 30 hari, SPOP tidak disampaikan dan WP tidak mengajukan penundaan. KPP menerbitkan surat teguran yang dikirim ke Akun WP. Tujuh hari setelah tanggal teguran diterima, SPOP tetap tidak disampaikan. Tindak lanjut yang paling tepat adalah ...",
+    "options": {
+      "A": "KPP menerbitkan SPPT berdasarkan NJOP tahun lalu dan menutup proses tanpa tindakan lanjutan",
+      "B": "KPP menerbitkan STP PBB atas keterlambatan penyampaian SPOP beserta sanksi dendanya",
+      "C": "KPP membuat analisis risiko untuk usulan pemeriksaan PBB",
+      "D": "KPP menetapkan objek pajak sebagai tidak terdaftar dan mencabut SKT objek PBB-nya"
+    },
+    "answerKey": "C",
+    "explanation": "Alur SPOP P5L: SPOP dikirim 1 Februari (perkebunan, migas, pabum) / 31 Maret (perhutanan, minerba, lainnya) → disampaikan paling lama **30 hari** → dapat ditunda (permohonan diterima sebelum 30 hari berakhir, penundaan paling lama 7 hari) → bila tidak disampaikan, **surat teguran** → WP wajib menyampaikan SPOP **paling lama 7 hari** sejak tanggal diterimanya teguran → bila tetap tidak, **KPP membuat analisis risiko untuk usulan Pemeriksaan**. Kriteria pemeriksaan PMK-15/2025 juga memuat \"WP tidak menyampaikan SPOP\".",
+    "whyOthersWrong": "- A — Penetapan tanpa pengujian mengabaikan probis pemeriksaan untuk WP yang tidak menyampaikan SPOP.\n- B — Tidak ada STP PBB atas keterlambatan SPOP; STP PBB untuk PBB tidak/kurang dibayar setelah jatuh tempo.\n- D — Pencabutan SKT hanya bila objek tidak lagi memenuhi persyaratan subjektif, bukan karena tidak lapor.",
+    "references": "PMK-186/2019 s.t.d.d. PMK-234/2022; PMK-81/2024 (bagian PBB); PMK-15/2025 Pasal 4 (bahan paparan hlm. 216, 223, 816, 821)."
+  },
+  {
+    "number": 9,
+    "id": "P1-009",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Wajib Pajak Nonaktif vs penghapusan NPWP",
+    "difficulty": "Mudah",
+    "question": "Sdr. Dimas (WP OP penduduk, karyawan) terkena PHK pada Januari 2026 dan sejak itu belum memperoleh penghasilan. Ia datang ke KPP meminta NPWP-nya \"dihapus\". Layanan yang paling tepat sesuai PMK-81/2024 adalah ...",
+    "options": {
+      "A": "Penghapusan NPWP karena WP tidak lagi memenuhi syarat objektif setelah berhenti bekerja",
+      "B": "Perubahan data menjadi WP bukan penduduk karena tidak lagi berpenghasilan di Indonesia",
+      "C": "Pencabutan pengukuhan PKP dan penonaktifan akses pembuatan faktur pajak",
+      "D": "Penetapan sebagai Wajib Pajak Nonaktif"
+    },
+    "answerKey": "D",
+    "explanation": "Kriteria **penghapusan NPWP** WP OP terbatas pada: meninggal dunia (tanpa warisan belum terbagi), meninggalkan Indonesia dan tidak lagi berstatus penduduk/selama-lamanya, atau memiliki lebih dari 1 NPWP. Kondisi Sdr. Dimas (tidak melakukan usaha/pekerjaan bebas dan **belum/tidak memperoleh penghasilan atau di bawah PTKP**) adalah kriteria **penetapan WP Nonaktif** (kriteria huruf b). NIK sebagai NPWP penduduk tetap melekat; status nonaktif dapat diaktifkan kembali.",
+    "whyOthersWrong": "- A — Tidak memenuhi kriteria penghapusan NPWP OP penduduk.\n- B — Ia tetap penduduk Indonesia.\n- C — Ia bukan PKP.",
+    "references": "PMK-81/2024 (kriteria WP Nonaktif dan Penghapusan NPWP); PER-07/PJ/2025 (bahan paparan hlm. 10, 809)."
+  },
+  {
+    "number": 10,
+    "id": "P1-010",
+    "unit": "1. Advokasi Kebijakan Perpajakan",
+    "topic": "Nondeductibility suap/gratifikasi – Pasal 20A PP 20/2026",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dalam analisis laporan keuangan PT Global Ekspor, AR menemukan akun \"biaya fasilitasi perizinan luar negeri\" Rp750 juta yang dari dokumen pendukungnya merupakan pemberian uang kepada pejabat bea masuk negara tujuan ekspor agar barang cepat dirilis. WP membebankan biaya tersebut sebagai pengurang penghasilan bruto dengan alasan \"lazim dalam praktik bisnis internasional dan bukan pejabat Indonesia\". Sikap AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Menerima pembebanan karena pemberian kepada pejabat asing tidak diatur UU Tipikor Indonesia",
+      "B": "Menerima pembebanan sepanjang dibuat daftar nominatif lengkap beserta bukti pengeluarannya",
+      "C": "Mengoreksi seluruhnya karena suap, termasuk kepada pejabat publik asing, bukan biaya",
+      "D": "Mengoreksi 50% karena pengeluaran tersebut diperlakukan sebagai biaya entertainment"
+    },
+    "answerKey": "C",
+    "explanation": "PP 20/2026 menambahkan **Pasal 20A**: pengeluaran berupa pemberian suap, gratifikasi, dan/atau pemberian lain dengan nama dan dalam bentuk apa pun sebagaimana dimaksud peraturan tindak pidana korupsi/suap, **termasuk yang diberikan kepada pejabat publik asing**, bukan merupakan biaya untuk mendapatkan, menagih, dan memelihara penghasilan. Definisi pejabat publik asing mengacu pada *OECD Anti-Bribery Convention* (termasuk pejabat bea cukai negara asing). Seluruh Rp750 juta dikoreksi fiskal positif; temuan dapat dituangkan dalam SP2DK.",
+    "whyOthersWrong": "- A — Pasal 20A secara eksplisit mencakup pejabat publik asing.\n- B — Daftar nominatif adalah syarat biaya promosi/entertainment, bukan pembenar suap.\n- D — Tidak ada dasar koreksi parsial; seluruhnya nondeductible.",
+    "references": "Pasal 6 dan Pasal 9 UU PPh; PP 20/2026 Pasal 20A beserta penjelasannya (bahan paparan hlm. 720–722)."
+  },
+  {
+    "number": 11,
+    "id": "P1-011",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Metode penghitungan biaya hidup",
+    "difficulty": "Mudah",
+    "question": "Dalam pendekatan penghitungan biaya hidup untuk menguji penghasilan WP orang pribadi, pernyataan yang tepat adalah ...",
+    "options": {
+      "A": "Biaya hidup mencakup seluruh pengeluaran WP, termasuk pembelian harta untuk menambah kekayaan",
+      "B": "Apabila WP tidak memiliki utang, penghasilannya minimal sama dengan biaya hidup WP beserta tanggungannya",
+      "C": "Biaya hidup hanya mencakup konsumsi rumah tangga WP sendiri, tidak termasuk tanggungan",
+      "D": "Metode biaya hidup hanya dapat digunakan apabila WP menyelenggarakan pembukuan lengkap"
+    },
+    "answerKey": "B",
+    "explanation": "Biaya hidup adalah **seluruh pengeluaran WP beserta tanggungannya**, **tidak termasuk** pengeluaran untuk menambah kekayaan. Bila WP tidak memiliki utang, penghasilan WP **minimal sama dengan biaya hidup** — inilah *break even point* bagi WP untuk mencukupi kebutuhan hidup tanpa penambahan harta. Kelompok biaya hidup: konsumsi rumah tangga, transportasi, pendidikan, kesehatan, rekreasi, gaya hidup, sumbangan, olahraga, pemeliharaan harta, pengeluaran terkait perolehan penghasilan, pajak dan retribusi, lainnya.",
+    "whyOthersWrong": "- A — Pengeluaran untuk menambah kekayaan dikeluarkan (masuk ke metode pertambahan kekayaan bersih).\n- C — Termasuk tanggungan.\n- D — Justru metode ini berguna ketika pembukuan tidak tersedia/tidak dapat dipercaya.",
+    "references": "SE-05/PJ/2022; materi Analisis Potensi WP OP (bahan paparan hlm. 712–713)."
+  },
+  {
+    "number": 12,
+    "id": "P1-012",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Pendekatan satuan/volume (input–output)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Rumah Makan \"Padang Raya\" milik Tuan Hasan melaporkan peredaran bruto Rp900 juta pada SPT Tahunan 2025. Dari pengamatan dan wawancara AR: pemakaian beras rata-rata 40 kg/hari, setiap 1 kg beras menghasilkan 8 porsi, harga rata-rata per porsi (nasi + lauk) Rp25.000, dan rumah makan buka 360 hari setahun. Estimasi peredaran bruto dan simpulan yang paling tepat adalah ...",
+    "options": {
+      "A": "Rp2,88 miliar; indikasi omzet tidak dilaporkan ± Rp1,98 miliar, masih di bawah Rp4,8 M",
+      "B": "Rp2,88 miliar; WP wajib dikukuhkan PKP secara jabatan atas jasa rumah makan",
+      "C": "Rp360 juta; omzet SPT sudah wajar karena lebih besar dari estimasi",
+      "D": "Rp9,6 miliar; WP wajib dikukuhkan PKP secara jabatan dan tidak lagi WP PBT"
+    },
+    "answerKey": "A",
+    "explanation": "Pendekatan satuan/volume dengan variabel input: Volume output = volume input × persentase/koefisien menghasilkan output.\n- Porsi/hari = 40 kg × 8 = 320 porsi.\n- Omzet/hari = 320 × Rp25.000 = Rp8.000.000.\n- Omzet/tahun = Rp8 juta × 360 = **Rp2.880.000.000**.\nSelisih dengan SPT = 2,88 M − 0,9 M = **Rp1,98 M** → indikasi peredaran bruto tidak dilaporkan, menjadi bahan SP2DK. Karena < Rp4,8 M, belum ada dasar PKP jabatan (tetapi perlu diuji juga apakah rumah makan termasuk objek PBJT daerah, bukan PPN).",
+    "whyOthersWrong": "- B — Omzet < Rp4,8 M; selain itu jasa boga/katering rumah makan merupakan objek pajak daerah (bukan objek PPN).\n- C — Salah hitung (tidak mengalikan jumlah porsi).\n- D — Salah hitung (mengalikan berlebihan).",
+    "references": "SE-05/PJ/2022 – pendekatan satuan/volume (bahan paparan hlm. 708–710); Pasal 4A ayat (3) UU PPN."
+  },
+  {
+    "number": 13,
+    "id": "P1-013",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Metode pertambahan kekayaan bersih + biaya hidup",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Data Ny. Ratna (pedagang tekstil, WP OP) Tahun 2025:\n- Harta 1 Januari Rp2,5 miliar; utang 1 Januari Rp500 juta\n- Harta 31 Desember Rp3,4 miliar; utang 31 Desember Rp800 juta (termasuk kredit mobil baru Rp300 juta)\n- Biaya hidup keluarga Rp20 juta per bulan\n- Penghasilan neto dalam SPT Tahunan Rp300 juta\n\nEstimasi penghasilan Ny. Ratna dengan metode pertambahan kekayaan bersih yang dikombinasikan dengan biaya hidup adalah ...",
+    "options": {
+      "A": "Rp1.140.000.000",
+      "B": "Rp900.000.000",
+      "C": "Rp840.000.000",
+      "D": "Rp600.000.000"
+    },
+    "answerKey": "C",
+    "explanation": "Penghasilan OP = **pertambahan kekayaan bersih + biaya hidup**.\n- Kekayaan bersih awal = 2,5 M − 0,5 M = Rp2,0 M.\n- Kekayaan bersih akhir = 3,4 M − 0,8 M = Rp2,6 M.\n- Pertambahan kekayaan bersih = Rp600 juta.\n- Biaya hidup = 20 juta × 12 = Rp240 juta.\n- Estimasi penghasilan = 600 + 240 = **Rp840 juta** → selisih Rp540 juta dibanding SPT, menjadi dasar permintaan penjelasan (asal-usul penambahan harta).\nPerhatikan: kredit mobil menambah harta sekaligus utang sehingga tidak menambah kekayaan bersih.",
+    "whyOthersWrong": "- A — Menggunakan kenaikan harta bruto (900 juta) + biaya hidup tanpa memperhitungkan kenaikan utang.\n- B — Hanya kenaikan harta bruto.\n- D — Hanya pertambahan kekayaan bersih tanpa biaya hidup.",
+    "references": "SE-05/PJ/2022 – metode pertambahan kekayaan bersih (bahan paparan hlm. 714)."
+  },
+  {
+    "number": 14,
+    "id": "P1-014",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Data pemicu – kelebihan kompensasi PPN (jembreng SPT PPN)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Saat \"menjembreng\" SPT Masa PPN PT Arta Niaga, AR menemukan:\n- Masa Januari 2025: lebih bayar Rp20 juta, dikompensasikan ke masa berikutnya.\n- Masa Februari 2025: WP mengisi \"kompensasi dari masa sebelumnya\" Rp50 juta; PK Rp120 juta, PM Rp70 juta; SPT dinyatakan nihil.\nAnalisis potensi PPN Masa Februari 2025 yang paling tepat adalah ...",
+    "options": {
+      "A": "Tidak ada potensi karena SPT Masa Februari berstatus nihil dan telah disampaikan tepat waktu",
+      "B": "Kurang bayar Rp30 juta karena kompensasi yang sah hanya sebesar lebih bayar Januari Rp20 juta",
+      "C": "Kurang bayar Rp50 juta karena kompensasi dari masa sebelumnya tidak boleh digunakan sama sekali",
+      "D": "Kurang bayar Rp100 juta, yaitu PK Rp120 juta dikurangi kompensasi yang sah Rp20 juta"
+    },
+    "answerKey": "B",
+    "explanation": "PK − PM = 120 − 70 = Rp50 juta kurang bayar, dikurangi kompensasi. Kompensasi yang sah hanya sebesar lebih bayar masa sebelumnya, yaitu **Rp20 juta**. Kelebihan kompensasi Rp30 juta tidak didukung → PPN kurang bayar **Rp30 juta**. Ini adalah salah satu dari **28 data pemicu** (\"Data Kelebihan Kompensasi PPN\") dan sekaligus **bukti transaksi/data perpajakan yang termasuk data konkret** menurut PER-18/PJ/2025 (\"kelebihan kompensasi pada SPT Masa PPN yang tidak didukung dengan kelebihan bayar pada SPT Masa PPN sebelumnya\"). Teknik jembreng memang sering menemukan \"kompensasi tidak nyambung\".",
+    "whyOthersWrong": "- A — Status nihil diperoleh dari kompensasi yang tidak sah.\n- C — Kompensasi Rp20 juta sah.\n- D — Salah hitung.",
+    "references": "Pasal 9 ayat (4) UU PPN; SE-05/PJ/2022 analisis mandiri (jembreng PPN); PER-18/PJ/2025 Pasal 2 (bahan paparan hlm. 700–702, 826)."
+  },
+  {
+    "number": 15,
+    "id": "P1-015",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "PPN emas perhiasan – PMK-48/2023",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Toko Emas \"Kencana\" (PKP pedagang emas perhiasan) pada Masa Juni 2026 menjual emas perhiasan kepada konsumen akhir Rp2 miliar. Seluruh perolehan emas perhiasannya didukung faktur pajak lengkap dari pabrikan. Dalam SPT Masa PPN, WP melaporkan PPN keluaran Rp22 juta dan mengkreditkan PM atas pembelian dari pabrikan Rp15 juta sehingga hanya menyetor Rp7 juta. Analisis AR yang paling tepat adalah ...",
+    "options": {
+      "A": "SPT sudah benar karena PM atas pembelian dari pabrikan berfaktur lengkap boleh dikreditkan",
+      "B": "Potensi kurang bayar Rp15 juta karena atas besaran tertentu PM tidak dapat dikreditkan",
+      "C": "PPN terutang Rp33 juta (1,65%) karena penjualan dilakukan kepada konsumen akhir",
+      "D": "PPN terutang Rp240 juta dengan tarif umum karena emas perhiasan adalah BKP biasa"
+    },
+    "answerKey": "B",
+    "explanation": "PMK-48/2023: PKP pedagang emas perhiasan memungut PPN dengan **besaran tertentu 1,1% × harga jual** bila memiliki faktur pajak/dokumen tertentu lengkap atas perolehan (1,65% bila tidak lengkap). Sesuai Pasal 9A UU PPN, atas penyerahan yang menggunakan besaran tertentu **PM tidak dapat dikreditkan** (dianggap telah diperhitungkan dalam besaran tertentu).\n- PPN terutang = 1,1% × Rp2 M = Rp22 juta (sudah benar).\n- Pengkreditan PM Rp15 juta tidak sah → kurang bayar **Rp15 juta**.",
+    "whyOthersWrong": "- A — Bertentangan dengan Pasal 9A UU PPN.\n- C — 1,65% hanya jika faktur perolehan tidak lengkap.\n- D — Emas perhiasan menggunakan besaran tertentu.",
+    "references": "Pasal 9A UU PPN; PMK-48/2023 (bahan paparan hlm. 130–131, 716)."
+  },
+  {
+    "number": 16,
+    "id": "P1-016",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Potensi sektor perbankan – bunga kredit NPL cash basis",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Bank Sejahtera mengakui pendapatan bunga atas kredit *non-performing* (NPL) secara *cash basis* dalam SPT Tahunan. Dari penelitian, bank tidak melampirkan perjanjian tambahan (addendum) dengan debitur pada SPT Tahunannya. Langkah analisis potensi yang paling tepat adalah ...",
+    "options": {
+      "A": "Koreksi bunga NPL yang seharusnya diakui akrual karena addendum tidak dilampirkan",
+      "B": "Tidak ada potensi karena pengakuan cash basis atas bunga NPL selalu diperbolehkan bagi bank",
+      "C": "Mengoreksi seluruh pendapatan bunga bank menjadi objek PPh final Pasal 4 ayat (2)",
+      "D": "Mengusulkan agar piutang NPL dihapus dan dibebankan sebagai biaya pada tahun berjalan"
+    },
+    "answerKey": "A",
+    "explanation": "Berdasarkan KEP-184/PJ/2002 dan SE-08/PJ/2002, bunga kredit NPL dapat diakui saat diterima (*cash basis*) **dengan syarat** bank dan debitur membuat **perjanjian tambahan/addendum** atas perjanjian kredit dan **melampirkannya pada SPT Tahunan**. Bahan paparan menyebut fakta lapangan: WP mengakui cash basis tetapi tidak melampirkan addendum → syarat tidak terpenuhi → bunga NPL **harus diakui secara akrual**, sehingga terdapat potensi koreksi penghasilan.",
+    "whyOthersWrong": "- B — Cash basis bersyarat.\n- C — Pendapatan bunga kredit bank merupakan penghasilan objek PPh badan tarif umum.\n- D — Tidak menjawab persoalan pengakuan pendapatan bunga; penghapusan piutang memiliki syarat sendiri (daftar nominatif).",
+    "references": "KEP-184/PJ/2002; SE-08/PJ/2002; materi Analisis Potensi Bank Umum (bahan paparan hlm. 738)."
+  },
+  {
+    "number": 17,
+    "id": "P1-017",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Ekualisasi biaya gaji vs SPT PPh Pasal 21",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Mitra Logistik melaporkan biaya gaji dan tunjangan Rp1,2 miliar pada laporan laba rugi 2025. Total penghasilan bruto pegawai pada SPT Masa PPh Pasal 21 Masa Desember (setahun) hanya Rp800 juta. Penjelasan WP yang **dapat menjelaskan secara sah sebagian selisih** dan perlu diverifikasi AR adalah ...",
+    "options": {
+      "A": "Sebagian biaya gaji dibayarkan kepada pegawai berpenghasilan di bawah PTKP sehingga tidak perlu dilaporkan",
+      "B": "Sebagian adalah imbalan jasa outsourcing (objek PPh 23) yang dicatat di akun gaji",
+      "C": "Sebagian gaji dibayarkan secara tunai sehingga tidak tercatat dan tidak perlu dilaporkan dalam SPT PPh 21",
+      "D": "Selisih merupakan bonus direksi yang tidak dipotong karena baru dibayarkan pada akhir tahun buku"
+    },
+    "answerKey": "B",
+    "explanation": "Ekualisasi biaya gaji vs bruto PPh 21 adalah teknik profiling/analisis mandiri. Selisih yang sah dapat timbul dari **reklasifikasi akun**, misalnya pembayaran jasa outsourcing kepada badan penyedia jasa yang objek pemotongannya PPh Pasal 23 (bukan PPh 21) tetapi dicatat di akun gaji. AR tetap harus memverifikasi bukti potong PPh 23 terkait. Bila tidak dapat dibuktikan, selisih menjadi potensi PPh 21.",
+    "whyOthersWrong": "- A — Pegawai di bawah PTKP tetap wajib dilaporkan dalam SPT Masa PPh 21 (bukti potong tetap dibuat walau PPh nihil).\n- C — Cara pembayaran tidak menghapus kewajiban pemotongan dan pelaporan.\n- D — Bonus direksi tetap objek PPh 21 saat dibayarkan; justru merupakan potensi.",
+    "references": "Pasal 21 UU PPh; PMK-168/2023; materi Ekualisasi (bahan paparan hlm. 859)."
+  },
+  {
+    "number": 18,
+    "id": "P1-018",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Pengecualian subjek PPh final – PT OP oleh tenaga ahli",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dr. Yudi adalah dokter spesialis yang membuka praktik mandiri. Pada 2026 ia mendirikan PT Perorangan \"Sehat Yudi\" yang kegiatannya menyediakan jasa konsultasi dan tindakan medis yang dilakukan oleh Dr. Yudi sendiri. Peredaran bruto PT tersebut Rp1,5 miliar dan PT menghitung PPh dengan tarif final 0,5%. Simpulan AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Benar, karena PT Perorangan adalah subjek PPh final 0,5% dan omzetnya masih di bawah Rp4,8 miliar",
+      "B": "Tidak tepat, karena penghasilan dari jasa kesehatan bukan merupakan objek PPh",
+      "C": "Tidak tepat; PT OP yang menyerahkan jasa sejenis pekerjaan bebas pendirinya dikecualikan",
+      "D": "Benar, sepanjang Dr. Yudi tidak menerima gaji dan seluruh penghasilan dicatat atas nama PT"
+    },
+    "answerKey": "C",
+    "explanation": "PP 20/2026 Pasal 57 ayat (2) menambahkan pengecualian: **PT OP yang dibentuk oleh WP OP yang memiliki keahlian khusus, yang menyerahkan jasa sejenis dengan jasa sehubungan dengan pekerjaan bebas** (dokter termasuk tenaga ahli Pasal 56 ayat (4)) **tidak dapat** menjadi subjek PPh final 0,5%. Ini meniru ketentuan sebelumnya untuk CV/firma yang dibentuk tenaga ahli, dan mencegah praktik \"membungkus\" pekerjaan bebas dalam PT OP. Penghasilan PT dikenai tarif umum (dengan kemungkinan fasilitas Pasal 31E bila memenuhi). Contoh dalam bahan paparan memakai konsultan pajak.",
+    "whyOthersWrong": "- A — Mengabaikan pengecualian subjek.\n- B — Jasa kesehatan dikecualikan dari PPN, bukan dari PPh.\n- D — Tidak relevan terhadap kriteria pengecualian.",
+    "references": "PP 20/2026 Pasal 56 ayat (4), Pasal 57 ayat (2) (bahan paparan hlm. 725, 727)."
+  },
+  {
+    "number": 19,
+    "id": "P1-019",
+    "unit": "2. Analisis Potensi Pajak",
+    "topic": "Pemilihan teknik penggalian potensi WP OP pengusaha",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "AR mengawasi Tuan Gani, pedagang grosir minuman kemasan yang seluruh transaksinya tunai, tidak menyelenggarakan pembukuan yang memadai, dan bersikap tertutup saat dimintai keterangan. Data internal DJP atas WP sangat terbatas. Kombinasi pendekatan penggalian potensi yang **paling tepat** untuk menguji omzet WP adalah ...",
+    "options": {
+      "A": "Pendekatan rasio menggunakan data CbCR grup usaha sebagai pembanding peredaran usaha WP",
+      "B": "Pengamatan langsung volume usaha, diuji silang dengan biaya hidup dan kekayaan bersih",
+      "C": "Analisis transfer pricing dengan metode CUP atas pembelian dari distributor minuman",
+      "D": "Menunggu data ILAP dari perbankan sebelum melakukan kegiatan pengawasan apa pun terhadap WP"
+    },
+    "answerKey": "B",
+    "explanation": "Karakteristik WP OP pengusaha menurut bahan paparan: perilaku beragam, data internal sangat terbatas, data eksternal lebih terbatas, **transaksi cash**, karakter defensif dan tertutup → **analisis mandiri harus diperkuat** dan data lapangan relatif mudah diperoleh. Teknik yang cocok: kunjungan/pengamatan (volume barang keluar-masuk, jumlah pegawai, jam operasional, lokasi cabang), lalu diuji silang dengan **biaya hidup** dan **pertambahan kekayaan bersih**. Delapan pendekatan menghitung omzet yang tersedia: transaksi tunai/nontunai, sumber & penggunaan dana, satuan/volume, biaya hidup, pertambahan kekayaan bersih, SPT/hasil pemeriksaan tahun sebelumnya, proyeksi nilai ekonomi, dan rasio.",
+    "whyOthersWrong": "- A — CbCR hanya relevan untuk grup multinasional besar.\n- C — Tidak ada transaksi afiliasi yang diuji.\n- D — Pasif; bertentangan dengan prinsip penguatan analisis mandiri.",
+    "references": "SE-05/PJ/2022; materi Analisis Potensi WP OP (bahan paparan hlm. 704–708)."
+  },
+  {
+    "number": 20,
+    "id": "P1-020",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Ruang lingkup pengawasan PMK-111/2025",
+    "difficulty": "Mudah",
+    "question": "Berdasarkan PMK-111/2025, \"Pengawasan Wilayah\" adalah pengawasan atas ...",
+    "options": {
+      "A": "Kegiatan ekonomi yang dilakukan WP serta identifikasi WP di setiap wilayah kerja",
+      "B": "Pemenuhan kewajiban pelaporan SPT seluruh WP terdaftar di satu wilayah KPP",
+      "C": "WP strategis yang berada di wilayah kerja Kanwil beserta seluruh cabangnya",
+      "D": "Pemenuhan kewajiban PBB sektor perdesaan dan perkotaan di wilayah kerja KPP"
+    },
+    "answerKey": "A",
+    "explanation": "Pasal 3 PMK-111/2025 membagi ruang lingkup pengawasan menjadi: (1) **WP terdaftar**, (2) **WP belum terdaftar**, dan (3) **Pengawasan Wilayah**, yaitu pengawasan atas **kegiatan ekonomi yang dilakukan oleh WP serta identifikasi WP di setiap wilayah kerja**. Pengawasan wilayah dilakukan antara lain melalui kegiatan pengumpulan data: pengamatan kegiatan ekonomi, wawancara, *geotagging*, dan pengambilan gambar.",
+    "whyOthersWrong": "- B — Termasuk pengawasan WP terdaftar.\n- C — Bukan definisi pengawasan wilayah.\n- D — PBB-P2 merupakan pajak daerah.",
+    "references": "PMK-111/2025 Pasal 3 (bahan paparan hlm. 647, 777)."
+  },
+  {
+    "number": 21,
+    "id": "P1-021",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Tanggapan SP2DK & pemberitahuan perpanjangan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "SP2DK kepada PT Cahaya Teknik (Akun WP sudah aktif) diterbitkan dan tersedia di Akun WP pada 2 Maret 2026. Pada 18 Maret 2026, WP mengirim surat pemberitahuan perpanjangan jangka waktu tanggapan yang diterima KPP pada hari yang sama, dan tanggapan lengkap baru disampaikan 22 Maret 2026. Analisis AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Perpanjangan tidak sah karena terlambat; AR dapat melanjutkan pembahasan atau kunjungan",
+      "B": "Perpanjangan sah karena diajukan secara tertulis sehingga tanggapan 22 Maret diterima tepat waktu",
+      "C": "SP2DK harus diterbitkan ulang karena WP mengajukan permintaan perpanjangan secara tertulis",
+      "D": "AR wajib langsung mengusulkan pemeriksaan bukti permulaan karena WP terlambat menanggapi"
+    },
+    "answerKey": "A",
+    "explanation": "Jangka waktu tanggapan SP2DK **14 hari** sejak peristiwa yang lebih dahulu; untuk penyampaian melalui Akun WP dihitung sejak **tanggal penerbitan** (2 Maret) → berakhir 16 Maret 2026. Perpanjangan **paling lama 7 hari** hanya sah bila **pemberitahuan perpanjangan diterima KPP sebelum jangka waktu 14 hari berakhir**. Pemberitahuan 18 Maret terlambat → tidak ada perpanjangan. Sesuai Pasal 6 ayat (11), DJP dapat melakukan **pembahasan dan/atau kunjungan** dalam hal WP tidak menyampaikan tanggapan (tanggapan yang masuk tetap dapat dipertimbangkan sebagai data).",
+    "whyOthersWrong": "- B — Syarat waktu pemberitahuan tidak terpenuhi.\n- C — Tidak ada ketentuan penerbitan ulang SP2DK karena permintaan perpanjangan.\n- D — Bukper hanya bila terdapat indikasi tindak pidana, bukan karena keterlambatan tanggapan.",
+    "references": "PMK-111/2025 Pasal 6 (bahan paparan hlm. 650–655)."
+  },
+  {
+    "number": 22,
+    "id": "P1-022",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Tanggapan tidak sesuai – pembahasan/kunjungan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Atas SP2DK mengenai selisih omzet PPN vs PPh Badan Rp3 miliar, PT Berkah Pangan menyampaikan tanggapan tertulis bahwa selisih tersebut \"merupakan uang muka penjualan\" tanpa melampirkan kontrak, rekening koran, maupun faktur pajak uang muka. Langkah AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Menerima tanggapan WP dan membuat BAP2DK dengan kesimpulan case closed",
+      "B": "Melakukan pembahasan atau kunjungan karena tanggapan tidak didukung bukti",
+      "C": "Langsung menerbitkan STP atas selisih omzet beserta sanksi bunganya",
+      "D": "Menerbitkan surat teguran karena WP tidak memberikan penjelasan yang memadai"
+    },
+    "answerKey": "B",
+    "explanation": "Pasal 6 ayat (11) PMK-111/2025: DJP **dapat melakukan pembahasan dan/atau kunjungan** dalam hal (a) tanggapan WP tidak sesuai, (b) terdapat data/keterangan tambahan, atau (c) WP tidak menyampaikan tanggapan. Selain itu, dalam hal WP **tidak menyetujui** sebagian/seluruh data dalam SP2DK, **penjelasan harus disertai bukti/dokumen pendukung**. Tanggapan tanpa bukti = tidak sesuai → pembahasan (daring/luring dengan surat undangan) → hasilnya dituangkan dalam **BA pelaksanaan P2DK (BAP2DK)**.",
+    "whyOthersWrong": "- A — Klaim tanpa bukti belum dapat menutup kasus.\n- C — STP tidak dapat diterbitkan atas selisih omzet (perlu penetapan melalui pemeriksaan bila WP tidak membetulkan).\n- D — Teguran untuk SPT tidak disampaikan sesuai batas waktu/pelaksanaan ketentuan, bukan alat klarifikasi selisih data.",
+    "references": "PMK-111/2025 Pasal 6 ayat (11), Pasal 7 (bahan paparan hlm. 655, 793)."
+  },
+  {
+    "number": 23,
+    "id": "P1-023",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Penandatanganan BAP2DK secara daring",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Pembahasan P2DK dengan Tuan Rudi dilakukan melalui *video conference* pada Senin, 4 Mei 2026. Tuan Rudi tidak dapat melakukan tanda tangan elektronik, sehingga AR mengirim konsep BAP2DK pada hari yang sama. Sampai Senin, 11 Mei 2026 Tuan Rudi tidak mengirim kembali konsep yang telah ditandatangani. Status BAP2DK yang paling tepat adalah ...",
+    "options": {
+      "A": "Pembahasan dianggap batal dan harus diulang secara luring di KPP dengan undangan baru",
+      "B": "Tuan Rudi dianggap hadir tetapi tidak bersedia menandatangani, sehingga BAP2DK cukup ditandatangani AR",
+      "C": "Tuan Rudi dianggap tidak menghadiri pembahasan sehingga dianggap menyetujui hasil P2DK",
+      "D": "BAP2DK tidak dapat dibuat tanpa tanda tangan WP sehingga P2DK belum dapat diselesaikan"
+    },
+    "answerKey": "B",
+    "explanation": "Dalam pembahasan daring, bila tanda tangan elektronik tidak dapat dilakukan, konsep BAP2DK dikirim kepada WP dan WP wajib mengirim kembali konsep yang telah ditandatangani **paling lama 5 hari kerja** sejak konsep dikirim (4 Mei → 5 hari kerja berakhir 11 Mei). Bila tidak disampaikan kembali, WP **dianggap menghadiri pembahasan namun tidak bersedia menandatangani BAP2DK**, dan BAP2DK **hanya ditandatangani AR/pegawai DJP** yang ditugaskan.",
+    "whyOthersWrong": "- A — Tidak ada ketentuan pembatalan pembahasan.\n- C — WP hadir secara daring sehingga tidak dianggap tidak hadir.\n- D — BAP2DK dapat ditandatangani sepihak oleh AR dalam kondisi tertentu.",
+    "references": "PMK-111/2025 (penandatanganan BA pelaksanaan) (bahan paparan hlm. 657–658, 803)."
+  },
+  {
+    "number": 24,
+    "id": "P1-024",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Hasil kegiatan P2DK – usulan lain",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dari P2DK atas Tuan Joko (WP OP terdaftar, belum PKP), terbukti dan diakui WP dalam BAP2DK bahwa peredaran bruto usaha distribusi pupuknya pada 2024 mencapai Rp7 miliar. Tuan Joko menyatakan tetap tidak mau melaporkan usaha untuk dikukuhkan sebagai PKP. Usulan hasil P2DK yang paling tepat adalah ...",
+    "options": {
+      "A": "Case closed (huruf a) karena WP sudah mengakui peredaran brutonya dalam BAP2DK",
+      "B": "Perubahan status menjadi WP nonaktif sampai WP bersedia melaporkan usahanya",
+      "C": "Penghapusan NPWP secara jabatan karena WP menolak melaksanakan kewajiban sebagai PKP",
+      "D": "Pengukuhan PKP secara jabatan, lalu dapat diusulkan pemeriksaan atas PPN"
+    },
+    "answerKey": "D",
+    "explanation": "Hasil kegiatan P2DK berupa **case closed (huruf a)** → SP3-P2DK, atau **usulan lain (huruf b–q)**, antara lain: perubahan data jabatan, penghapusan NPWP jabatan, **pengukuhan PKP secara jabatan (huruf d)**, pencabutan PKP jabatan, pendaftaran objek PBB jabatan, pembatasan/pemblokiran layanan publik tertentu, penilaian, pengamatan/intelijen, **pemeriksaan**, dan pemeriksaan bukti permulaan. Omzet Rp7 M > Rp4,8 M dan WP menolak → **PKP jabatan**; potensi PPN Masa 2025 dst (sejak seharusnya PKP) yang tidak dipenuhi diusulkan **pemeriksaan** untuk penerbitan SKPKB (Pasal 13 ayat (1) huruf e KUP).",
+    "whyOthersWrong": "- A — Kewajiban belum dipenuhi sehingga tidak dapat ditutup.\n- B, C — Bertentangan dengan fakta WP memiliki usaha beromzet besar.",
+    "references": "PMK-111/2025 Pasal 25–26 (hasil kegiatan P2DK); Pasal 2 ayat (4a) dan Pasal 13 ayat (1) huruf e UU KUP (bahan paparan hlm. 659, 69)."
+  },
+  {
+    "number": 25,
+    "id": "P1-025",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Imbauan angsuran PPh Pasal 25 – hasil imbauan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Rimba Kayu menyampaikan SPT Tahunan 2025 dengan PPh terutang Rp2,4 miliar, tetapi setelah mengajukan pengurangan angsuran, angsuran PPh Pasal 25 tahun 2026 dibayar hanya Rp20 juta per bulan tanpa dasar perhitungan yang wajar. Data laporan keuangan semester I 2026 menunjukkan laba meningkat. AR menyampaikan surat imbauan, namun WP tidak memberikan tanggapan dalam 14 hari. Usulan hasil kegiatan imbauan yang paling relevan adalah ...",
+    "options": {
+      "A": "Penetapan nilai angsuran pajak dalam tahun pajak berjalan",
+      "B": "Penutupan kegiatan penyampaian imbauan karena WP telah melaporkan SPT Tahunan tepat waktu",
+      "C": "Penerbitan SKPKB PPh Pasal 25 atas kekurangan angsuran bulan-bulan sebelumnya",
+      "D": "Penghapusan NPWP secara jabatan karena WP tidak menanggapi surat imbauan"
+    },
+    "answerKey": "A",
+    "explanation": "Imbauan dilakukan terhadap pemenuhan kewajiban: (a) pengukuhan PKP, (b) pembayaran, (c) pelaporan, (d) **angsuran pajak dalam tahun pajak berjalan**, (e) layanan/fasilitas, (f) kewajiban formal. Usulan hasil kegiatan imbauan meliputi: (a) penutupan, **(b) penetapan nilai angsuran pajak dalam tahun pajak berjalan yang harus dibayar sendiri oleh WP**, (c) perubahan data jabatan, … (l) pembatasan/pemblokiran layanan publik tertentu. WP tidak menanggapi → dapat dilakukan pembahasan/kunjungan dan diusulkan penetapan nilai angsuran.",
+    "whyOthersWrong": "- B — Masalah belum tuntas.\n- C — Kekurangan angsuran PPh 25 dalam tahun berjalan ditagih dengan **STP** (Pasal 14 KUP), bukan SKPKB; dan yang relevan dari imbauan adalah penetapan angsuran.\n- D — Tidak relevan.",
+    "references": "PMK-111/2025 (penyampaian imbauan) (bahan paparan hlm. 661, 668); PMK-215/2018 jo. PMK-81/2024 (angsuran PPh 25)."
+  },
+  {
+    "number": 26,
+    "id": "P1-026",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Surat teguran – penyampaian langsung tidak berhasil",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Tn. Hendra tidak menyampaikan SPT Tahunan 2025. Surat teguran yang dikirim via pos kembali karena \"alamat tidak dikenal\". AR kemudian mendatangi lokasi usaha Tn. Hendra untuk menyampaikan teguran secara langsung, namun karyawan dewasa di lokasi menolak menerima surat. Penanganan yang paling tepat adalah ...",
+    "options": {
+      "A": "AR membuat BA yang hanya ditandatangani AR; WP dianggap menerima teguran dan tidak menanggapi",
+      "B": "AR membatalkan teguran dan menunggu WP datang ke KPP untuk menerima surat teguran secara langsung",
+      "C": "AR menitipkan surat teguran kepada ketua RT setempat tanpa membuat berita acara penyampaian",
+      "D": "AR langsung menerbitkan SKPKB secara jabatan karena WP menolak menerima surat teguran"
+    },
+    "answerKey": "A",
+    "explanation": "Teguran diterbitkan bila SPT tidak disampaikan sesuai batas waktu atau terkait pelaksanaan ketentuan. Penyampaian secara langsung kepada WP, wakil, kuasa, **pegawai**, atau anggota keluarga dewasa dibuatkan **BA penyampaian surat teguran**. Bila pihak tersebut **tidak ditemukan atau tidak bersedia menerima**, BA **hanya ditandatangani AR/pegawai DJP** yang ditugaskan dan WP **dianggap menerima surat teguran dan tidak memberikan tanggapan**. Teguran dapat ditindaklanjuti dengan **pembahasan atau kunjungan**.",
+    "whyOthersWrong": "- B — Pasif dan tidak sesuai probis.\n- C — Tidak sesuai saluran penyampaian yang sah.\n- D — SKPKB hanya melalui pemeriksaan (Pasal 13 ayat (1) huruf b KUP setelah ditegur).",
+    "references": "PMK-111/2025 (pemberian teguran) (bahan paparan hlm. 670–672)."
+  },
+  {
+    "number": 27,
+    "id": "P1-027",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Masa transisi Coretax – penyusunan DPP",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Pada Juli 2026, AR memperoleh data hasil KPD yang menunjukkan indikasi ketidakpatuhan PT Delta atas **Tahun Pajak 2024** dan **Tahun Pajak 2025**. PT Delta adalah WP tunggal yang diawasi KPP Pratama. Berdasarkan petunjuk pelaksanaan masa transisi, penanganan yang paling tepat adalah ...",
+    "options": {
+      "A": "Seluruh tahun pajak ditindaklanjuti di Coretax melalui Pengawasan Pembayaran Masa (PPM)",
+      "B": "TP 2024 tidak dapat lagi diawasi karena Coretax berlaku sejak 1 Januari 2025",
+      "C": "Seluruh tahun pajak ditindaklanjuti di Approweb karena data bersumber dari KPD",
+      "D": "TP 2024 melalui PKM di legacy; TP 2025 melalui DPP Coretax"
+    },
+    "answerKey": "D",
+    "explanation": "Juklak transisi (ND-1718/PJ.06/2024, ND-236/PJ.06/2025, ND-927/PJ.06/2025): penyusunan DPP untuk pengawasan kepatuhan WP **s.d. Tahun Pajak 2024 → PKM pada kondisi Approweb (legacy)**; **Tahun Pajak 2025 dst → PPM dan PKM di Coretax**. Untuk data KPD/intelijen/penegakan hukum (RBP) s.d. 2024 atas WP tunggal: tolak di Coretax dengan alasan \"Ditindaklanjuti di Legacy\" lalu usulkan DPP di legacy; sejak 2025: setujui di Coretax dan menjadi DPP di Coretax.",
+    "whyOthersWrong": "- A, C — Tidak membedakan segmentasi tahun pajak.\n- B — Kewenangan pengawasan TP 2024 tetap ada (masih dalam daluwarsa penetapan).",
+    "references": "ND-1718/PJ.06/2024; ND-236/PJ.06/2025; ND-927/PJ.06/2025 (bahan paparan hlm. 673–677)."
+  },
+  {
+    "number": 28,
+    "id": "P1-028",
+    "unit": "3. Analisis Kepatuhan Wajib Pajak",
+    "topic": "Data atas WP yang sedang diperiksa",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "AR menerima data ILAP berupa pembelian tanah oleh PT Omega senilai Rp15 miliar pada 2023 yang tidak tercermin dalam laporan keuangan. Saat dicek, PT Omega sedang dilakukan pemeriksaan seluruh jenis pajak untuk Tahun Pajak 2023. Tindakan AR yang paling tepat adalah ...",
+    "options": {
+      "A": "Menerbitkan SP2DK atas TP 2023 secara paralel dengan pemeriksaan agar potensi tergali",
+      "B": "Mengusulkan pemeriksaan ulang TP 2023 atas dasar data baru yang belum terungkap",
+      "C": "Mengabaikan data karena TP 2023 sudah dalam proses pemeriksaan seluruh jenis pajak",
+      "D": "Meneruskan data ke tim pemeriksa dan tidak menindaklanjuti dengan P2DK paralel"
+    },
+    "answerKey": "D",
+    "explanation": "Dalam alur SE-05/PJ/2022, sebelum ditindaklanjuti dilakukan validasi/analisis. Apabila **WP sedang dilakukan pemeriksaan, telah dilakukan pemeriksaan, sedang dilakukan pemeriksaan bukper, atau sedang disidik** untuk periode tersebut, tindak lanjutnya adalah **penerusan data dan/atau keterangan** (kepada pemeriksa/penyidik), bukan P2DK, agar tidak terjadi duplikasi dan data dapat diuji dalam pemeriksaan.",
+    "whyOthersWrong": "- A — Duplikasi kegiatan atas periode yang sama.\n- B — Pemeriksaan ulang hanya setelah terbit SKP dan ada data baru; saat ini pemeriksaan masih berjalan.\n- C — Data tetap bernilai bagi pemeriksa.",
+    "references": "SE-05/PJ/2022 (alur pengawasan WP terdaftar) (bahan paparan hlm. 645)."
+  },
+  {
+    "number": 29,
+    "id": "P1-029",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Isi minimum profil WP",
+    "difficulty": "Mudah",
+    "question": "Profil Wajib Pajak paling sedikit memuat hal-hal berikut, **kecuali** ...",
+    "options": {
+      "A": "Identitas WP dan kegiatan usaha WP",
+      "B": "Daftar keluarga/keterkaitan WP dan profil risiko (CRM)",
+      "C": "Riwayat pengawasan dan pemeriksaan serta profil risiko ketertagihan",
+      "D": "Penilaian kinerja AR yang mengampu WP"
+    },
+    "answerKey": "D",
+    "explanation": "Profil WP paling sedikit memuat: identitas WP, kegiatan usaha, daftar keluarga/keterkaitan, profil risiko (CRM), riwayat pengawasan, riwayat pemeriksaan, riwayat keberatan dan banding, serta profil risiko ketertagihan. Profil WP adalah rangkaian data fiskal yang dapat diklasifikasikan atas **data permanen, data akumulatif, dan data lainnya**; kinerja pegawai bukan bagian profil WP.",
+    "whyOthersWrong": "- A, B, C — Seluruhnya termasuk muatan minimum profil WP.",
+    "references": "Materi Profiling WP (bahan paparan hlm. 849–850)."
+  },
+  {
+    "number": 30,
+    "id": "P1-030",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Pohon kepemilikan & hubungan istimewa",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dari data AHU dan SPT, AR menyusun pohon kepemilikan berikut:\n- Tuan Parmin memiliki 65% saham PT Kalsel Indah; Tuan Brama 30%; Tuan Sembara 5%.\n- PT Kalsel Indah memiliki 99% saham PT Banjarmasin Trading.\n- Tuan Brama juga memiliki 25% saham CV Barito Jaya.\n\nPasangan yang **tidak** memiliki hubungan istimewa karena kepemilikan/penyertaan modal adalah ...",
+    "options": {
+      "A": "Tuan Parmin dengan PT Banjarmasin Trading",
+      "B": "Tuan Brama dengan PT Banjarmasin Trading",
+      "C": "PT Kalsel Indah dengan CV Barito Jaya",
+      "D": "Tuan Sembara dengan PT Banjarmasin Trading"
+    },
+    "answerKey": "D",
+    "explanation": "Hubungan istimewa karena kepemilikan: penyertaan modal **langsung atau tidak langsung paling rendah 25%**, atau hubungan antara dua WP atau lebih yang sama-sama dimiliki ≥ 25% oleh pihak yang sama.\n- A: Parmin → PT Banjarmasin tidak langsung = 65% × 99% = 64,35% → istimewa.\n- B: Brama → PT Banjarmasin = 30% × 99% = 29,7% → istimewa.\n- C: Tuan Brama memiliki 30% PT Kalsel Indah dan 25% CV Barito Jaya → kedua badan memiliki hubungan istimewa karena dimiliki ≥ 25% oleh pihak yang sama.\n- D: Sembara → PT Banjarmasin = 5% × 99% = 4,95% < 25% → **tidak** (kecuali ada unsur penguasaan/keluarga).\nPohon kepemilikan yang lengkap memudahkan deteksi transaksi hubungan istimewa.",
+    "whyOthersWrong": "Lihat perhitungan A–C di atas; ketiganya memenuhi ambang 25%.",
+    "references": "Pasal 18 ayat (4) UU PPh; PMK-172/2023 Pasal 2 (bahan paparan hlm. 753, 855)."
+  },
+  {
+    "number": 31,
+    "id": "P1-031",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Identitas WP – masterfile vs kondisi lapangan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Saat menyusun profil PT Sentosa Plastik, AR menemukan: KLU pada masterfile \"perdagangan besar plastik\", namun dari kunjungan dan foto lapangan WP memproduksi sendiri kemasan plastik (memiliki mesin *blow molding* dan 60 pekerja produksi). Alamat masterfile juga merupakan kantor lama yang sudah kosong. Tindak lanjut yang paling tepat dan efisien adalah ...",
+    "options": {
+      "A": "Ubah KLU dan alamat secara jabatan, lalu sesuaikan benchmark dan analisis PPh 21",
+      "B": "Mencatat temuan dalam profil saja tanpa tindak lanjut karena KLU dan alamat tidak memengaruhi pajak",
+      "C": "Mengusulkan penghapusan NPWP karena alamat masterfile tidak lagi ditemukan",
+      "D": "Mengusulkan pemeriksaan bukti permulaan karena WP memberikan data identitas tidak benar"
+    },
+    "answerKey": "A",
+    "explanation": "Langkah profiling \"Identitas WP\" mencakup: alamat masterfile vs alamat usaha, pemegang saham AHU vs SPT, **KLU masterfile vs jenis usaha di lapangan (dengan foto)**, kewajiban perpajakan, pohon kepemilikan, struktur organisasi, posisi CRM. Prinsip *continuous supervision*: \"KPD tidak hanya untuk mengumpulkan data, tetapi juga dapat menindaklanjuti update data profil secara jabatan\" — kondisi \"data profil WP tidak update\" → **perubahan data WP secara jabatan**. KLU yang benar juga penting karena benchmark (GPM, CTTOR) dan predictor CRM bergantung pada KLU.",
+    "whyOthersWrong": "- B — Data profil yang salah memengaruhi analisis risiko dan benchmark.\n- C — WP masih ada dan beroperasi; tidak memenuhi kriteria penghapusan.\n- D — Ketidaksesuaian data administrasi bukan indikasi tindak pidana.",
+    "references": "SE-11/PJ/2020; materi Profiling dan Continuous Supervision (bahan paparan hlm. 846, 854)."
+  },
+  {
+    "number": 32,
+    "id": "P1-032",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Ekualisasi omzet PPN vs PPh Badan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Ekualisasi PT Prima Elektrik 2025: DPP PPN keluaran (setahun) Rp12 miliar, peredaran usaha SPT PPh Badan Rp10 miliar. WP menyampaikan beberapa penjelasan. Penjelasan yang **tidak dapat diterima** sebagai rekonsiliasi selisih adalah ...",
+    "options": {
+      "A": "Penjualan mesin Rp1 miliar dengan faktur kode 09 yang dalam PPh dicatat sebagai laba penjualan aset",
+      "B": "Faktur uang muka Rp600 juta atas penyerahan yang baru diakui sebagai penjualan Januari 2026",
+      "C": "Pemberian cuma-cuma barang dagangan Rp400 juta yang dalam PPh dicatat sebagai beban promosi",
+      "D": "Penjualan tunai Rp2 miliar kepada konsumen akhir yang tidak dibukukan karena \"tidak ada faktur lengkap\""
+    },
+    "answerKey": "D",
+    "explanation": "Ekualisasi omzet PPN vs PPh bertujuan memisahkan **perbedaan waktu/klasifikasi yang sah** dari **omzet yang tidak dilaporkan**.\n- A: Penyerahan aktiva (Pasal 16D) masuk DPP PPN tetapi dalam PPh dicatat sebagai laba/rugi penjualan aset → sah.\n- B: Faktur uang muka (PPN terutang saat pembayaran diterima) vs pengakuan penjualan akrual tahun berikutnya → beda waktu sah.\n- C: Pemakaian sendiri/cuma-cuma terutang PPN tetapi tidak menjadi peredaran usaha PPh → sah (meski dalam DPP PPN dipakai nilai lain, konsep rekonsiliasinya sah).\n- D: Pengakuan bahwa ada penjualan yang **tidak dibukukan** justru menunjukkan omzet PPh kurang dilaporkan (dan arah selisihnya pun tidak menjelaskan, karena penjualan tersebut juga belum masuk PPN) → potensi.",
+    "whyOthersWrong": "- A, B, C — Merupakan rekonsiliasi yang wajar dan dapat diverifikasi.",
+    "references": "Materi Ekualisasi & Analisis Mandiri (bahan paparan hlm. 702, 859)."
+  },
+  {
+    "number": 33,
+    "id": "P1-033",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Penjaminan kualitas data KPD (validasi formal vs material)",
+    "difficulty": "Mudah",
+    "question": "AR merekam data KPDL tentang toko bangunan \"Sumber Rejeki\" di Coretax. Kepala Seksi Pengawasan (atasan langsung) dan Kepala Seksi PKD masing-masing melakukan validasi. Pembagian tanggung jawab yang paling tepat adalah ...",
+    "options": {
+      "A": "Atasan langsung memvalidasi formal (validitas NIK/NPWP); Kasi PKD memvalidasi material (nilai data)",
+      "B": "Atasan langsung memvalidasi material; Kasi PKD memvalidasi formal",
+      "C": "Seluruh validasi dilakukan otomatis oleh sistem Coretax tanpa peran pejabat struktural",
+      "D": "Validasi hanya oleh Kasi PKD karena data akan didistribusikan ke seksi dan KPP lain"
+    },
+    "answerKey": "B",
+    "explanation": "Dalam alur KPDL (SE-11/PJ/2020) di Coretax:\n- **Validasi material oleh atasan langsung**: kelengkapan (field terisi dengan benar: NIK/NPWP, KPP tujuan, alamat jelas, uraian informatif), **relevansi** (terkait klasifikasi ICALEP – *Income, Cost, Asset, Liability, Equity, Profile*), dan **akurasi** (nilai benar atau estimasi wajar).\n- **Validasi formal oleh Kasi PKD**: NPWP (dilakukan sistem), NIK (melalui sarana tersedia, mis. appportal), standardisasi penulisan nama dan alamat, data belum terdapat dalam basis data DJP, dan masa/tahun pajak belum daluwarsa.",
+    "whyOthersWrong": "- A — Peran tertukar.\n- C, D — Tidak sesuai pembagian peran penjaminan kualitas data.",
+    "references": "SE-11/PJ/2020 (bahan paparan hlm. 845)."
+  },
+  {
+    "number": 34,
+    "id": "P1-034",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Etika dan tata cara KPDL",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Seorang AR berencana melakukan KPDL sendirian pada Minggu malam di kawasan ruko baru yang ramai, tanpa surat tugas, menggunakan pakaian bebas agar \"tidak dicurigai pedagang\". Penilaian yang paling tepat atas rencana tersebut adalah ...",
+    "options": {
+      "A": "Tidak sesuai ketentuan pelaksanaan KPDL",
+      "B": "Diperbolehkan karena tujuan KPDL adalah menggali data secara alami tanpa menimbulkan kecurigaan",
+      "C": "Diperbolehkan asalkan data yang diperoleh divalidasi formal oleh Kasi PKD sebelum digunakan",
+      "D": "Tidak sesuai hanya karena dilakukan pada hari Minggu; aspek lain dapat diterima"
+    },
+    "answerKey": "A",
+    "explanation": "Hal yang perlu diperhatikan dalam KPDL: (1) koordinasi dengan pemda, Babinsa, Bhabinkamtibmas, pengelola bangunan; (2) pegawai dibekali pengetahuan teknik dan data dari SIDJP/sumber lain; (3) **minimal 2 orang**, **pakaian kerja**, **tanda pengenal, surat tugas**, dokumen terkait; (4) dilakukan **pada hari dan jam kerja**; (5) **di luar hari/jam kerja hanya berdasarkan penugasan pimpinan unit**; (6) mengutamakan nilai Kemenkeu, prinsip kehati-hatian, mitigasi konflik kepentingan. Untuk pengamatan tertutup terdapat mekanisme tersendiri (permintaan bantuan pengamatan/intelijen).",
+    "whyOthersWrong": "- B, C — Mengabaikan syarat pelaksanaan.\n- D — Pelanggaran tidak hanya soal hari.",
+    "references": "SE-11/PJ/2020 (bahan paparan hlm. 847)."
+  },
+  {
+    "number": 35,
+    "id": "P1-035",
+    "unit": "4. Profiling Wajib Pajak",
+    "topic": "Kepatuhan formal sebagai indikator kooperatif",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Tabulasi riwayat kepatuhan formal PT Laju Armada 2021–2025: SPT Masa PPN selalu terlambat 1–3 bulan dan sering dibetulkan setelah SP2DK; SPT Tahunan selalu \"nihil\" atau rugi; pernah 2 kali diperiksa dengan hasil SKPKB yang diajukan keberatan dan seluruhnya ditolak. Simpulan profiling yang paling tepat untuk menentukan pendekatan pengawasan adalah ...",
+    "options": {
+      "A": "WP kooperatif karena selalu membetulkan SPT setelah SP2DK, sehingga cukup diberi edukasi",
+      "B": "WP kurang kooperatif; prioritaskan pengawasan dan pertimbangkan usul pemeriksaan",
+      "C": "WP harus segera dihapus NPWP-nya karena terus-menerus melaporkan rugi",
+      "D": "Riwayat pemeriksaan dan keberatan tidak relevan untuk menentukan pendekatan pengawasan"
+    },
+    "answerKey": "B",
+    "explanation": "Bahan paparan menyebut: tabulasi riwayat pelaporan masa, pelaporan tahunan (termasuk status nihil/LB/KB), dan **riwayat pemeriksaan** dapat **memetakan sejauh mana kepatuhan formal WP yang mengindikasikan tingkat kooperatif WP**. Pola terlambat, pembetulan setelah ditegur, SPT rugi terus-menerus, dan sengketa yang ditolak menunjukkan risiko tinggi → pengawasan prioritas (DPP), dan bila tidak efektif → usulan pemeriksaan (SPT rugi juga merupakan kriteria pemeriksaan).",
+    "whyOthersWrong": "- A — Bertentangan dengan fakta.\n- C — Tidak memenuhi kriteria penghapusan.\n- D — Riwayat pemeriksaan termasuk muatan profil.",
+    "references": "Materi Profiling – Kepatuhan Formal (bahan paparan hlm. 850, 858); PMK-15/2025 Pasal 4."
+  },
+  {
+    "number": 36,
+    "id": "P1-036",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Ruang lingkup ekstensifikasi 2026",
+    "difficulty": "Mudah",
+    "question": "Ruang lingkup kegiatan ekstensifikasi tahun 2026 dirumuskan sebagai \"Aktivasi WP\" yang terdiri atas ...",
+    "options": {
+      "A": "WP Baru (bersumber dari DPE dan KPD) dan WP NA (bersumber dari NA TD dan KPD)",
+      "B": "WP Baru dari DPE dan WP yang sedang diperiksa untuk tujuan lain",
+      "C": "WP PKP baru dari pengukuhan jabatan dan WP badan baru dari OSS",
+      "D": "WP Nonaktif saja, karena pendaftaran sudah otomatis melalui NIK"
+    },
+    "answerKey": "A",
+    "explanation": "\"Pengawasan WP Belum Terdaftar 2026 = **Aktivasi WP**\", yang mencakup: **WP Baru** (sumber: Daftar Prioritas Ekstensifikasi/DPE dan KPD) dan **WP NA** (Non Aktif; sumber: WP Non Aktif Terdapat Data/NA TD dan KPD). Penduduk sudah memiliki NIK, tetapi NIK perlu **diaktivasi** sebagai NPWP; karena itu fokusnya adalah aktivasi.",
+    "whyOthersWrong": "- B, C — Bukan ruang lingkup yang dirumuskan.\n- D — WP baru tetap menjadi sasaran (NIK belum aktivasi/belum ber-NPWP).",
+    "references": "Materi Ekstensifikasi 2026 (bahan paparan hlm. 779–780)."
+  },
+  {
+    "number": 37,
+    "id": "P1-037",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Continuous supervision – PKP jabatan dari KPD",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Saat KPD berbasis wilayah, AR menemukan Toko \"Semar Jaya\" (WP OP sudah ber-NPWP, belum PKP) adalah grosir yang memasok toko-toko di kawasan pasar. Dari wawancara dan observasi, penjualan per hari lebih dari Rp20 juta dan toko buka sekitar 300 hari per tahun. Tindakan AR yang paling tepat sesuai konsep *continuous supervision* adalah ...",
+    "options": {
+      "A": "Merekam data dan menindaklanjuti dengan pengukuhan PKP secara jabatan",
+      "B": "Hanya merekam data pendapatan di KPD form, lalu menunggu toko tersebut masuk DPE tahun berikutnya",
+      "C": "Menerbitkan NPWP secara jabatan karena toko tersebut belum terdaftar sebagai PKP",
+      "D": "Mengusulkan pemeriksaan bukti permulaan karena WP menyembunyikan omzet sebenarnya"
+    },
+    "answerKey": "A",
+    "explanation": "Konsep *Continuous Supervision – KPD Kewilayahan & KPD Analisis Fasilitas*: \"KPD tidak hanya untuk mengumpulkan data, namun juga dapat melakukan tindak lanjut atas update data profil WP atau *action* lain yang ditemukan selama KPD secara jabatan\". Kondisi \"diketahui WP seharusnya PKP\" → **pengukuhan PKP secara jabatan**. Estimasi omzet > Rp20 juta × 300 hari = > **Rp6 miliar** > Rp4,8 M. Contoh ini identik dengan ilustrasi Toko Semar Jaya dalam bahan paparan.",
+    "whyOthersWrong": "- B — Memperlambat tindak lanjut; tujuan continuous supervision adalah mempercepat *action*.\n- C — WP sudah ber-NPWP.\n- D — Tidak ada indikasi tindak pidana.",
+    "references": "SE-11/PJ/2020; PMK-111/2025 (bahan paparan hlm. 846)."
+  },
+  {
+    "number": 38,
+    "id": "P1-038",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "WP belum terdaftar tidak menanggapi SP2DK – hasil P2DK",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Ny. Wulan (penduduk, NIK belum diaktivasi sebagai NPWP) tercantum dalam DPE karena data ILAP menunjukkan ia pemilik 3 kamar kos eksklusif dan usaha *laundry* dengan perkiraan omzet Rp1,2 miliar per tahun. SP2DK telah disampaikan secara langsung kepada anaknya yang sudah dewasa dengan BA, namun sampai batas waktu tidak ada tanggapan. Hasil kunjungan mengonfirmasi usaha berjalan. Keputusan yang paling tepat adalah ...",
+    "options": {
+      "A": "Menutup kasus karena WP tidak kooperatif dan telah diberi kesempatan menanggapi",
+      "B": "Menunggu WP mendaftar secara sukarela setelah menerima edukasi dari penyuluh",
+      "C": "Lanjut ke SPHPP/pembahasan dan aktivasi NIK secara jabatan",
+      "D": "Mengusulkan pengukuhan PKP secara jabatan atas seluruh omzet kos dan laundry"
+    },
+    "answerKey": "C",
+    "explanation": "Hasil kegiatan P2DK atas WP belum terdaftar meliputi **pemberian secara jabatan: (a) NPWP terhadap WP yang telah memenuhi syarat subjektif dan objektif namun belum mendaftarkan diri** (bagi OP penduduk berupa aktivasi NIK), dan (b) NITKU. Penyampaian SP2DK kepada anggota keluarga dewasa adalah sah. WP tidak menanggapi → penelitian potensi (EWS), SPHPP + undangan pembahasan; bila tetap tidak hadir → dianggap setuju, BAP2DK ditandatangani AR, dan LHP2DK merekomendasikan tindak lanjut (mis. usul pemeriksaan atas potensi yang belum dipenuhi).",
+    "whyOthersWrong": "- A — \"Tidak kooperatif\" bukan alasan *case closed*; alasan tidak ditindaklanjuti terbatas (tidak ditemukan, meninggal tanpa warisan, SPLN, tidak memenuhi syarat, tidak ada indikasi kewajiban, telah memenuhi).\n- B — Bertentangan dengan kewenangan jabatan (Pasal 2 ayat (4) KUP).\n- D — Omzet Rp1,2 M < Rp4,8 M (dan sewa kos/rumah tinggal merupakan jasa yang dibebaskan PPN).",
+    "references": "Pasal 2 ayat (4) UU KUP; PMK-111/2025 (pengawasan WP belum terdaftar) (bahan paparan hlm. 785, 788–800)."
+  },
+  {
+    "number": 39,
+    "id": "P1-039",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "WP tidak ditemukan saat visit",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Tim Ekstensifikasi akan menyampaikan SP2DK kepada Tuan Ahok (DPE risiko sedang) dengan visit ke alamat berdasarkan data ILAP kendaraan. Di lokasi, rumah tampak kosong dan tetangga menyatakan WP \"jarang pulang\", tetapi kendaraan mewah atas nama WP terlihat parkir di sebuah gudang di kawasan industri. Langkah yang paling tepat adalah ...",
+    "options": {
+      "A": "Menyimpulkan WP tidak dapat ditemukan dan menutup kasus dengan simpulan tersebut",
+      "B": "Meminta bantuan kegiatan intelijen atau pengamatan",
+      "C": "Menerbitkan NPWP jabatan tanpa SP2DK karena WP sengaja menghindar",
+      "D": "Menyampaikan SP2DK melalui tetangga dengan berita acara penyampaian"
+    },
+    "answerKey": "B",
+    "explanation": "SP2DK disampaikan melalui Portal WP, pos/kurir, atau visit. **Dalam hal WP tidak ditemukan pada saat visit, Tim Ekstensifikasi dapat melakukan permintaan bantuan kegiatan Intelijen atau pengamatan.** Fakta adanya indikasi keberadaan kegiatan (kendaraan di gudang) menunjukkan WP belum dapat disimpulkan \"tidak dapat ditemukan\".",
+    "whyOthersWrong": "- A — Prematur; masih ada petunjuk keberadaan WP.\n- C — Penerbitan jabatan memerlukan bukti terpenuhinya syarat subjektif-objektif melalui proses P2DK.\n- D — Tetangga bukan pihak yang sah menerima (sah: WP, wakil, kuasa, pegawai, anggota keluarga dewasa).",
+    "references": "PMK-111/2025; probis Ekstensifikasi (bahan paparan hlm. 787–788)."
+  },
+  {
+    "number": 40,
+    "id": "P1-040",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "WP meninggal dengan warisan belum terbagi",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Tuan Salim (DPE: pemilik 5 ruko yang disewakan, belum ber-NPWP aktif) meninggal dunia pada Februari 2026. Dari kunjungan diketahui ruko-ruko tersebut masih disewakan dan uang sewa diterima oleh ahli waris, sementara harta warisan belum dibagi. Keputusan Tim Ekstensifikasi yang paling tepat adalah ...",
+    "options": {
+      "A": "Kasus tidak ditindaklanjuti karena WP telah meninggal dunia sebelum SP2DK disampaikan",
+      "B": "Mengusulkan pemeriksaan bukti permulaan terhadap ahli waris yang menerima sewa",
+      "C": "Seluruh ahli waris langsung diberi NPWP jabatan masing-masing atas bagian sewanya",
+      "D": "Tetap ditindaklanjuti melalui wakil warisan belum terbagi (ahli waris/pelaksana wasiat)"
+    },
+    "answerKey": "D",
+    "explanation": "Alasan kegiatan P2DK **tidak ditindaklanjuti** adalah bila WP \"**telah meninggal dunia dan tidak meninggalkan warisan yang belum terbagi**\". Dalam kasus ini ada warisan belum terbagi yang menghasilkan sewa → **warisan belum terbagi adalah subjek pajak** (Pasal 2 ayat (1) huruf a UU PPh) menggantikan yang berhak, wajib didaftarkan paling lambat akhir bulan berikutnya setelah OP meninggal (PMK-81/2024), dan diwakili salah seorang ahli waris/pelaksana wasiat. Kewajiban almarhum semasa hidup juga tetap menjadi tanggungan warisan.",
+    "whyOthersWrong": "- A — Syarat \"tanpa warisan belum terbagi\" tidak terpenuhi.\n- B — Tidak ada indikasi pidana.\n- C — Selama warisan belum terbagi, penghasilan melekat pada subjek warisan belum terbagi, bukan langsung kepada ahli waris.",
+    "references": "Pasal 2 ayat (1) huruf a UU PPh; Pasal 32 UU KUP; PMK-81/2024 (pendaftaran WBT); PMK-111/2025 (bahan paparan hlm. 6, 800)."
+  },
+  {
+    "number": 41,
+    "id": "P1-041",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Ruang lingkup penelitian potensi (EWS)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Pada Agustus 2026, Tim Ekstensifikasi menangani Tuan Fikri yang terbukti menjalankan usaha distribusi suku cadang sejak 2019 tanpa NPWP aktif. Ruang lingkup penelitian potensi pajak menggunakan *Examination Working Sheet* (EWS) yang paling tepat adalah ...",
+    "options": {
+      "A": "Seluruh jenis pajak, maksimal 5 tahun sebelum tahun berjalan",
+      "B": "Hanya PPh Tahun Pajak 2025 karena tahun terakhir sebelum tahun berjalan",
+      "C": "Seluruh jenis pajak sejak 2019, saat usaha mulai dijalankan",
+      "D": "Hanya PPN karena usaha distribusi suku cadang merupakan penyerahan BKP"
+    },
+    "answerKey": "A",
+    "explanation": "Penelitian potensi pajak dalam ekstensifikasi dilakukan dengan EWS atas **seluruh jenis pajak** dan **masa pajak maksimal 5 tahun sebelum tahun berjalan** pelaksanaan ekstensifikasi. Selaras dengan Pasal 2 ayat (4a) UU KUP: kewajiban WP yang diberikan NPWP secara jabatan dimulai sejak memenuhi syarat subjektif-objektif, **paling lama 5 tahun sebelum** NPWP diterbitkan. EWS memuat akun pajak sesuai format SPT, penghitungan menurut WP, menurut petugas, dan selisih (nilai potensi).",
+    "whyOthersWrong": "- B, D — Ruang lingkup terlalu sempit.\n- C — Melebihi batas 5 tahun.",
+    "references": "Pasal 2 ayat (4a) UU KUP; probis Ekstensifikasi (bahan paparan hlm. 795)."
+  },
+  {
+    "number": 42,
+    "id": "P1-042",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "WP tidak hadir pembahasan akhir – BAP2DK & LHP2DK",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Setelah SPHPP disampaikan beserta undangan pembahasan akhir, Tuan Gilang (sudah diberikan NPWP jabatan) tidak hadir dan tidak memberikan kabar. Penelitian menunjukkan masih terdapat potensi PPh Rp250 juta yang belum dibayar. Rangkaian tindak lanjut yang paling tepat adalah ...",
+    "options": {
+      "A": "Menjadwalkan ulang pembahasan akhir sampai WP hadir agar BAP2DK dapat ditandatangani",
+      "B": "Menutup kasus (case closed) karena NPWP sudah diterbitkan secara jabatan",
+      "C": "Menerbitkan STP atas potensi PPh Rp250 juta beserta sanksi bunganya",
+      "D": "WP dianggap setuju; BAP2DK ditandatangani AR; LHP2DK usul pemeriksaan"
+    },
+    "answerKey": "D",
+    "explanation": "Dalam hal WP tidak hadir pembahasan akhir: (1) WP **dianggap menyetujui** hasil pengujian/pengawasan, (2) pembahasan akhir **dianggap telah dilakukan**, (3) potensi dihitung sesuai hasil pengujian. BAP2DK **hanya ditandatangani AR/pegawai DJP**. Rekomendasi LHP2DK: case closed (bila tidak ada potensi/telah dipenuhi/tidak memenuhi syarat), **usul IDLP** (indikasi pidana), atau **usul pemeriksaan (masih terdapat potensi yang belum dipenuhi)**.",
+    "whyOthersWrong": "- A — Tidak efisien; ketentuan sudah mengatur akibat ketidakhadiran.\n- B — Pemberian NPWP tidak menutup potensi yang belum dibayar.\n- C — Potensi PPh tahunan tidak dapat ditagih dengan STP; penetapan melalui pemeriksaan (SKPKB).",
+    "references": "PMK-111/2025; probis Ekstensifikasi (bahan paparan hlm. 799, 801–804)."
+  },
+  {
+    "number": 43,
+    "id": "P1-043",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Indikasi tindak pidana – usul IDLP",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dalam pengawasan WP belum terdaftar atas CV Bayu (belum ber-NPWP), Tim Ekstensifikasi menemukan bahwa CV tersebut sering menerbitkan \"faktur pajak\" menggunakan NPWP milik perusahaan lain yang sudah tidak aktif kepada beberapa pembeli PKP, dan PPN-nya tidak pernah disetor. Rekomendasi LHP2DK yang paling tepat adalah ...",
+    "options": {
+      "A": "Case closed karena CV belum terdaftar sehingga belum memiliki kewajiban PPN",
+      "B": "Usul IDLP karena terdapat indikasi tindak pidana di bidang perpajakan",
+      "C": "Usul pengukuhan PKP secara jabatan saja agar PPN dapat ditagih",
+      "D": "Usul pemeriksaan untuk menguji kepatuhan atas seluruh jenis pajak"
+    },
+    "answerKey": "B",
+    "explanation": "Usulan hasil P2DK WP belum terdaftar huruf f: **pengembangan dan analisis informasi, data, laporan, dan pengaduan (IDLP), dalam hal WP memiliki indikasi tindak pidana di bidang perpajakan**. Penerbitan faktur pajak dengan identitas pihak lain/tidak berdasarkan transaksi atau tanpa hak (Pasal 39A UU KUP) adalah indikasi pidana → LHP2DK merekomendasikan **usul IDLP**, yang kemudian dapat ditindaklanjuti dengan pemeriksaan bukti permulaan.",
+    "whyOthersWrong": "- A — Indikasi pidana tidak boleh ditutup.\n- C — Mengabaikan unsur pidana.\n- D — Pemeriksaan biasa tidak tepat untuk indikasi pidana; jalur yang tepat IDLP/bukper.",
+    "references": "Pasal 39A UU KUP; PMK-111/2025 (hasil P2DK huruf f) (bahan paparan hlm. 800, 804)."
+  },
+  {
+    "number": 44,
+    "id": "P1-044",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Objek PBB P5L belum terdaftar",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dari citra satelit dan KPD, Tim Ekstensifikasi mengidentifikasi PT Hutan Lestari (sudah ber-NPWP) mengelola areal hutan tanaman industri berdasarkan izin dari kementerian, namun areal tersebut belum terdaftar sebagai objek PBB sektor perhutanan. SP2DK tidak ditanggapi. Usulan yang paling tepat adalah ...",
+    "options": {
+      "A": "Pendaftaran objek pajak PBB secara jabatan",
+      "B": "Pengukuhan PKP secara jabatan",
+      "C": "Penerbitan SPPT PBB-P2 oleh pemerintah daerah",
+      "D": "Pencabutan SKT objek PBB"
+    },
+    "answerKey": "A",
+    "explanation": "Ruang lingkup pengawasan (WP terdaftar maupun belum terdaftar) mencakup **pendaftaran objek PBB** atas perkebunan, perhutanan, pertambangan (migas, pabum, minerba), dan sektor lainnya. Hasil P2DK/LHP2DK: **pendaftaran objek PBB secara jabatan** dalam hal terdapat objek PBB yang belum terdaftar. Dalam probis PBB, bila WP tidak melaksanakan kewajiban pendaftaran → pemeriksaan/penelitian administrasi → Kepala KPP menerbitkan SKT Objek PBB secara jabatan (dikirim paling lama 3 hari kerja).",
+    "whyOthersWrong": "- B — Tidak terkait objek PBB.\n- C — Areal kawasan perhutanan berizin adalah PBB P5L (pajak pusat), bukan PBB-P2.\n- D — Pencabutan SKT berlaku bagi objek yang tidak lagi memenuhi syarat subjektif.",
+    "references": "UU PBB; PMK-186/2019; PMK-111/2025 Pasal 3 (bahan paparan hlm. 178, 212, 647, 804)."
+  },
+  {
+    "number": 45,
+    "id": "P1-045",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Penetapan WP Nonaktif secara jabatan (PER-07/PJ/2025)",
+    "difficulty": "Mudah",
+    "question": "KPP sedang menyisir WP yang 5 tahun terakhir berturut-turut tidak melaporkan SPT, tidak melakukan pembayaran, dan tidak dipotong/dipungut pihak lain. Dari empat WP berikut, yang **tidak dapat** ditetapkan sebagai WP Nonaktif secara jabatan adalah ...",
+    "options": {
+      "A": "Tn. Andi, tidak memiliki tunggakan dan tidak sedang diperiksa",
+      "B": "Ny. Bunga, tidak memiliki tunggakan dan tidak mendapat fasilitas",
+      "C": "CV Citra, memiliki tunggakan pajak berdasarkan SKPKB yang belum dilunasi",
+      "D": "Tn. Deni, tidak memiliki tunggakan dan tidak sedang disidik"
+    },
+    "answerKey": "C",
+    "explanation": "Kriteria penetapan WP Nonaktif secara jabatan (PER-07/PJ/2025): (a) tidak melaporkan SPT Masa/Tahunan berturut-turut 5 tahun terakhir; (b) tidak dilakukan pemotongan/pemungutan oleh pihak lain berturut-turut 5 tahun; (c) **tidak memiliki tunggakan pajak** dan/atau tidak sedang melakukan upaya hukum; (d) tidak melakukan pembayaran berturut-turut 5 tahun; (e) tidak sedang dilakukan pemeriksaan, bukper, dan/atau penyidikan; (f) tidak mendapatkan fasilitas/insentif. CV Citra memiliki tunggakan → **tidak memenuhi** kriteria; seharusnya ditangani penagihan.",
+    "whyOthersWrong": "- A, B, D — Memenuhi kriteria yang disebutkan.",
+    "references": "PER-07/PJ/2025 (bahan paparan hlm. 810)."
+  },
+  {
+    "number": 46,
+    "id": "P1-046",
+    "unit": "5. Ekstensifikasi Perpajakan",
+    "topic": "Penyelesaian WP NA TD – imbauan massal",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "KPDJP menerbitkan imbauan massal kepada 5.000 WP Nonaktif Terdapat Data (NA TD) di wilayah KPP Pratama X melalui Akun WP/email. Sebulan kemudian, 1.200 WP tidak memberikan tanggapan dan datanya belum terklarifikasi. Peran KPP yang paling tepat adalah ...",
+    "options": {
+      "A": "Menunggu imbauan massal tahap berikutnya dari KPDJP sesuai jadwal program prioritas",
+      "B": "Menutup seluruh kasus karena imbauan sudah disampaikan melalui saluran resmi",
+      "C": "Melanjutkan pengawasan melalui teguran dan/atau SP2DK, termasuk imbauan via pos",
+      "D": "Langsung menghapus NPWP 1.200 WP tersebut karena tidak responsif"
+    },
+    "answerKey": "C",
+    "explanation": "PMK-111/2025 memungkinkan pengawasan secara otomatis melalui sistem (dasar imbauan massal/teguran massal). Alur NA TD: penyusunan dafnom dan penerbitan imbauan oleh **KPDJP** (*e-seal* KPDJP, namun mencantumkan nama Kepala KPP) → penyampaian via Akun WP/email → penyampaian kepada KPP → **KPP dapat menyampaikan imbauan melalui pos atau kunjungan** → bila data terklarifikasi/WP memenuhi kewajiban → *case closed*; bila tidak → **pengawasan melalui teguran dan/atau SP2DK**, disertai strategi komunikasi internal dan eksternal.",
+    "whyOthersWrong": "- A, B — Pasif; tidak sesuai alur.\n- D — Tidak memenuhi kriteria penghapusan; justru ada data yang menunjukkan aktivitas.",
+    "references": "PMK-111/2025; materi NA TD (bahan paparan hlm. 807–811)."
+  },
+  {
+    "number": 47,
+    "id": "P1-047",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Tipe pemeriksaan PMK-15/2025",
+    "difficulty": "Mudah",
+    "question": "Berdasarkan PMK-15/2025, pemeriksaan yang mencakup satu atau beberapa pos dalam SPT dan/atau SPOP yang dilakukan **secara sederhana** disebut ...",
+    "options": {
+      "A": "Pemeriksaan Lengkap",
+      "B": "Pemeriksaan Terfokus",
+      "C": "Pemeriksaan Spesifik",
+      "D": "Pemeriksaan Bukti Permulaan"
+    },
+    "answerKey": "C",
+    "explanation": "Tipe pemeriksaan untuk menguji kepatuhan: **Lengkap** – seluruh pos SPT/SPOP secara mendalam; **Terfokus** – satu/beberapa pos secara mendalam; **Spesifik** – satu/beberapa pos **secara sederhana**. Pemeriksaan bukti permulaan bukan tipe pemeriksaan PMK-15/2025.",
+    "whyOthersWrong": "- A dan B — Bersifat mendalam.\n- D — Pemeriksaan dalam rangka dugaan tindak pidana.",
+    "references": "PMK-15/2025 Pasal 2–3 (bahan paparan hlm. 815)."
+  },
+  {
+    "number": 48,
+    "id": "P1-048",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "LHP2DK sebagai data konkret (PER-18/PJ/2025 huruf h)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Dalam BAP2DK yang ditandatangani direktur PT Sumber Air, WP menyetujui kekurangan PPh Pasal 23 Rp180 juta dan berjanji membayar serta membetulkan SPT paling lambat 30 April 2026. Hingga Juni 2026, kewajiban tersebut tidak dipenuhi. Tindak lanjut yang paling tepat adalah ...",
+    "options": {
+      "A": "Usul pemeriksaan khusus berdasarkan data konkret",
+      "B": "Menerbitkan SP2DK baru atas data yang sama dengan jangka waktu tanggapan baru",
+      "C": "Mengusulkan pemeriksaan bukti permulaan karena WP mengingkari kesepakatan",
+      "D": "Menerbitkan STP atas PPh Pasal 23 Rp180 juta berdasarkan pengakuan dalam BA"
+    },
+    "answerKey": "A",
+    "explanation": "PER-18/PJ/2025 Pasal 2 ayat (1) huruf c → bukti transaksi/data perpajakan yang menjadi **data konkret**, antara lain huruf h: data/keterangan yang **telah diterbitkan SP2DK** dan **dibuat BA P2DK yang memuat persetujuan WP** atas pemenuhan kewajiban dan ditandatangani WP/wakil/kuasa, **namun belum/tidak dipenuhi sampai batas waktu yang disetujui**. Bahan paparan menegaskan: \"LHP2DK dalam pengawasan berpeluang menjadi salah satu data konkret\". Pemeriksaan data konkret memerlukan pengujian sederhana dan jangka waktu singkat.",
+    "whyOthersWrong": "- B — Duplikasi; tahap P2DK sudah selesai.\n- C — Tidak ada indikasi pidana.\n- D — Kekurangan PPh 23 yang belum dibayar berdasarkan pengakuan dalam BA tidak dapat langsung ditagih dengan STP; perlu ketetapan (SKPKB) melalui pemeriksaan.",
+    "references": "PER-18/PJ/2025 Pasal 2; PMK-15/2025 (bahan paparan hlm. 825–827)."
+  },
+  {
+    "number": 49,
+    "id": "P1-049",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Ketentuan pemeriksaan WP strategis tahun berjalan",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Pada Mei 2026, AR WP strategis menemukan pola biaya jasa afiliasi yang melonjak pada masa Januari–April 2026 (tahun pajak berjalan) tanpa data konkret. AR ingin mengusulkan pemeriksaan khusus berdasarkan analisis risiko untuk tahun pajak berjalan. Penilaian yang paling tepat adalah ...",
+    "options": {
+      "A": "Dapat diusulkan setelah dilakukan penelitian atas satu atau beberapa jenis pajak",
+      "B": "Tidak perlu usulan, cukup instruksi Kepala KPP karena WP strategis",
+      "C": "Dapat diusulkan pemeriksaan all taxes untuk tahun berjalan karena WP strategis",
+      "D": "Tidak dapat; tahun berjalan hanya pemeriksaan data konkret setelah P2DK selesai"
+    },
+    "answerKey": "D",
+    "explanation": "Ketentuan WP strategis:\n- **Data konkret**: tahun berjalan → dapat diusulkan setelah penelitian satu/beberapa jenis pajak/masa **dan P2DK selesai**; sebelum tahun berjalan → setelah penelitian komprehensif dan P2DK selesai.\n- **Pemeriksaan khusus berdasarkan analisis risiko satu/beberapa jenis pajak**: tahun berjalan → **tidak dapat**; sebelum tahun berjalan → dapat setelah penelitian komprehensif dan P2DK selesai.\n- **Analisis risiko all taxes**: tahun berjalan → **tidak dapat**.\nKarena belum ada data konkret, AR sebaiknya melakukan P2DK dan menyiapkan analisis untuk periode setelah tahun berakhir.",
+    "whyOthersWrong": "- A, C — Bertentangan dengan ketentuan tahun berjalan.\n- B — Tetap harus melalui mekanisme usulan dan persetujuan.",
+    "references": "SE-15/PJ/2018 jo. kebijakan pemeriksaan (bahan paparan hlm. 829–832)."
+  },
+  {
+    "number": 50,
+    "id": "P1-050",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Penggalian potensi tahun berjalan & DSP3",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Kepala KPP Pratama Y ingin mempercepat penerimaan dengan memerintahkan pemeriksaan tahun pajak berjalan terhadap 20 WP yang menurut AR \"terlihat ramai usahanya\", padahal 20 WP tersebut tidak tercantum dalam DSP3 dan tidak ada data konkret. Pendapat yang paling tepat sesuai kebijakan pemeriksaan adalah ...",
+    "options": {
+      "A": "Boleh, karena Kepala KPP berwenang menerbitkan persetujuan pemeriksaan di unitnya",
+      "B": "Boleh, jika WP menyetujui secara tertulis untuk diperiksa",
+      "C": "Boleh, asalkan pemeriksaan dilakukan secara lengkap atas seluruh jenis pajak",
+      "D": "Tidak tepat; tahun berjalan hanya untuk WP dalam DSP3 atau data konkret"
+    },
+    "answerKey": "D",
+    "explanation": "Kebijakan pemeriksaan: \"**Penggalian potensi dalam tahun berjalan pada setiap KPP hanya dapat dilakukan terhadap WP yang telah terdapat dalam DSP3**, kecuali KPP memperoleh keterangan lain berupa **data konkret** yang dapat ditindaklanjuti secara tersendiri\". Pilihan yang tepat adalah memperkuat pengawasan (P2DK/KPD) terhadap WP tersebut dan mengusulkannya masuk DSP3 berdasarkan analisis risiko.",
+    "whyOthersWrong": "- A — Kewenangan tetap dibatasi kebijakan pemeriksaan.\n- B, C — Tidak mengubah syarat DSP3/data konkret.",
+    "references": "SE-15/PJ/2018 dan kebijakan pemeriksaan (bahan paparan hlm. 832–833)."
+  },
+  {
+    "number": 51,
+    "id": "P1-051",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Pembagian tanggung jawab FPP vs petugas pemeriksa",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Unit pelaksana pemeriksaan menerima empat penugasan: (1) restitusi PPN tahun berjalan PT Ekspor Mandiri; (2) pemeriksaan data konkret PPh 23 CV Mitra; (3) pemeriksaan PBB perkebunan PT Kebun Raya; (4) pemeriksaan ulang atas PT Delta karena data baru. Penugasan yang **menjadi tanggung jawab Tim Pemeriksa Pajak yang terdiri dari Pejabat Fungsional Pemeriksa Pajak** adalah ...",
+    "options": {
+      "A": "(1) dan (4)",
+      "B": "(2) dan (3)",
+      "C": "(1), (2), dan (3)",
+      "D": "Seluruhnya"
+    },
+    "answerKey": "A",
+    "explanation": "Kebijakan umum: Tim Pemeriksa yang terdiri dari **Pejabat Fungsional Pemeriksa Pajak** bertanggung jawab atas **pemeriksaan restitusi PPN tahun berjalan**, **pemeriksaan seluruh jenis pajak**, dan **pemeriksaan ulang**. Tim yang terdiri dari **Petugas Pemeriksa Pajak** bertanggung jawab atas pemeriksaan satu/beberapa jenis pajak, termasuk **pemeriksaan data konkret**, **pemeriksaan PBB**, dan pemeriksaan SPT Masa Pengungkapan Aset secara Sukarela dengan Tarif Final.",
+    "whyOthersWrong": "(2) dan (3) merupakan tanggung jawab Petugas Pemeriksa Pajak.",
+    "references": "Kebijakan pemeriksaan (bahan paparan hlm. 835)."
+  },
+  {
+    "number": 52,
+    "id": "P1-052",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Pengungkapan ketidakbenaran SPT saat pemeriksaan (Pasal 8 ayat (4) KUP)",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Tirta sedang diperiksa untuk TP 2024. Sebelum SPHP disampaikan, WP menyadari ada penjualan Rp2 miliar yang tidak dilaporkan dan ingin \"membetulkan SPT\". Saran yang paling tepat adalah ...",
+    "options": {
+      "A": "Mengungkapkan ketidakbenaran SPT dalam laporan tersendiri sebelum SPHP",
+      "B": "WP dapat membetulkan SPT dengan Pasal 8 ayat (1) karena pemeriksaan belum selesai",
+      "C": "WP tidak dapat melakukan apa pun sampai SKP terbit, lalu mengajukan keberatan",
+      "D": "Pengungkapan dapat dilakukan dan otomatis menghentikan pemeriksaan"
+    },
+    "answerKey": "A",
+    "explanation": "Pembetulan SPT Pasal 8 ayat (1) hanya dapat dilakukan **sebelum dilakukan pemeriksaan**. Namun Pasal 8 ayat (4) UU KUP memberi kesempatan: walaupun telah dilakukan pemeriksaan, **dengan syarat DJP belum menyampaikan SPHP**, WP dengan kesadaran sendiri dapat **mengungkapkan dalam laporan tersendiri** tentang ketidakbenaran pengisian SPT. **Proses pemeriksaan tetap dilanjutkan** sampai selesai (pengungkapan diperhitungkan dalam SKP, dengan sanksi sesuai ketentuan).",
+    "whyOthersWrong": "- B — Pembetulan biasa tidak lagi tersedia.\n- C — Ada mekanisme Pasal 8 ayat (4).\n- D — Pemeriksaan tidak dihentikan.",
+    "references": "Pasal 8 ayat (1) dan (4) UU KUP (bahan paparan hlm. 48, 64)."
+  },
+  {
+    "number": 53,
+    "id": "P1-053",
+    "unit": "6. Pemeriksaan Pajak",
+    "topic": "Pemeriksaan PBB – bantuan penilaian vs bantuan penilai",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "UP2 (KPP Madya) akan memeriksa PBB sektor pertambangan minerba PT Batu Hitam untuk menetapkan NJOP. Di unit tersebut **tidak terdapat** Penilai Pajak maupun Petugas Penilai Pajak. Langkah Kepala UP2 yang paling tepat adalah ...",
+    "options": {
+      "A": "Meminta bantuan penilaian kepada Penilai Pajak di unitnya sendiri",
+      "B": "Menggunakan nilai yang dilaporkan WP dalam SPOP tanpa pengujian",
+      "C": "Menetapkan NJOP berdasarkan NJOP tahun sebelumnya tanpa penilaian",
+      "D": "Mengajukan bantuan penilai dari unit lain"
+    },
+    "answerKey": "D",
+    "explanation": "Dalam pemeriksaan PBB, Kepala UP2 melibatkan Penilai Pajak sebagai pihak yang memiliki keahlian tertentu untuk menetapkan NJOP:\n- **Bantuan Penilaian** — bila **terdapat** Penilai Pajak/Petugas Penilai Pajak pada unit pelaksana pemeriksaan.\n- **Bantuan Penilai** — bila **tidak terdapat** Penilai Pajak/Petugas Penilai Pajak pada unit pelaksana pemeriksaan.\nSelaras dengan PMK-79/2023 Pasal 32: kepala unit penilaian dapat meminta bantuan penilaian/bantuan penilai kepada unit penilaian lain dengan melampirkan latar belakang, tujuan, dan data objek.",
+    "whyOthersWrong": "- A — Unit tidak memiliki penilai.\n- B, C — NJOP dalam pemeriksaan PBB harus melalui penilaian.",
+    "references": "PMK-79/2023 Pasal 32; kebijakan pemeriksaan PBB (bahan paparan hlm. 693, 823)."
+  },
+  {
+    "number": 54,
+    "id": "P1-054",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "Konsep matriks risiko CRM dan treatment",
+    "difficulty": "Mudah",
+    "question": "Dalam *Compliance Risk Management* (CRM), WP dipetakan berdasarkan kemungkinan ketidakpatuhan (*likelihood*) dan dampak fiskal (*consequence*). *Treatment* yang paling sesuai bagi WP dengan kemungkinan ketidakpatuhan **rendah** dan dampak fiskal **rendah** adalah ...",
+    "options": {
+      "A": "Pemeriksaan lengkap seluruh jenis pajak secara berkala",
+      "B": "Pemeriksaan bukti permulaan secara terbuka",
+      "C": "Edukasi, pelayanan, dan imbauan",
+      "D": "Penyidikan untuk menimbulkan efek jera"
+    },
+    "answerKey": "C",
+    "explanation": "Prinsip CRM: sumber daya dialokasikan sesuai tingkat risiko. Risiko rendah → **edukasi, pelayanan, dan imbauan** (mendorong kepatuhan sukarela); risiko sedang → **pengawasan** (P2DK/imbauan/kunjungan); risiko tinggi → **pemeriksaan/penegakan hukum**. Hal ini terlihat pula dalam probis ekstensifikasi: DPE *high & medium risk* → analisis potensi dan SP2DK, sedangkan *low risk* → **edukasi**.",
+    "whyOthersWrong": "- A, B, D — Treatment untuk risiko tinggi/indikasi pidana.",
+    "references": "Konsep CRM DJP; probis ekstensifikasi (bahan paparan hlm. 782)."
+  },
+  {
+    "number": 55,
+    "id": "P1-055",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "CRM specific risk sektor rokok – WP NE dengan data CK-1",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Hasil CRM *specific risk* sektor rokok menandai CV Kretek Mandiri dengan prediktor **SR10_X_001**: berstatus WP Non-Efektif, namun terdapat data pesanan pita cukai CK-1. Nilai HJE pada dokumen CK-1 setahun mencapai Rp9 miliar. Tindak lanjut yang paling tepat adalah ...",
+    "options": {
+      "A": "Mengabaikan, karena status WP non-efektif berarti tidak ada kewajiban yang harus diawasi",
+      "B": "Mengaktifkan kembali status WP, menerbitkan SP2DK PPh/PPN, dan mempertimbangkan PKP jabatan",
+      "C": "Menghapus NPWP karena WP non-efektif dan tidak pernah menyampaikan SPT",
+      "D": "Meminta Bea Cukai menghentikan penjualan pita cukai kepada CV tersebut"
+    },
+    "answerKey": "B",
+    "explanation": "Dalam CRM sektor rokok, klaster prediktor profil antara lain: **SR10_X_001** (WP Non-Efektif tetapi ada data pesanan pita cukai CK-1) dan **SR10_X_016** (total HJE CK-1 > Rp4,8 miliar tetapi belum/terlambat ditetapkan PKP). Data pihak ketiga (DJBC) membuktikan kegiatan usaha nyata → status nonaktif tidak sesuai → **aktivasi kembali** (perubahan status secara jabatan), P2DK atas PPh dan PPN (penyerahan hasil tembakau menggunakan DPP nilai lain atas HJE), dan **PKP jabatan**.",
+    "whyOthersWrong": "- A, C — Bertentangan dengan data kegiatan usaha nyata.\n- D — Di luar kewenangan DJP dan bukan treatment pajak.",
+    "references": "CRM Specific Risk Sektor Rokok (bahan paparan hlm. 741–742); PMK-63/2022."
+  },
+  {
+    "number": 56,
+    "id": "P1-056",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "CRM sektor rokok – PPN dibayar dimuka tanpa CK-2/CK-3",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Tembakau Jaya mengkreditkan \"PPN dibayar dimuka\" atas pembelian pita cukai Rp1,5 miliar pada SPT Masa PPN, namun di saat yang sama melaporkan pengembalian pita cukai dalam jumlah besar. Tidak ditemukan dokumen pengembalian/perusakan pita cukai (CK-2/CK-3) di DJBC. Risiko yang diidentifikasi prediktor dan analisis yang paling tepat adalah ...",
+    "options": {
+      "A": "Tidak ada risiko, karena PPN dibayar dimuka atas pita cukai selalu dapat dikreditkan",
+      "B": "SR10_X_012: CTTOR WP lebih rendah dari industri pada golongan pabrik yang sama",
+      "C": "SR10_X_018: harga beli cengkeh terlalu tinggi dibanding harga acuan Ditjenbun",
+      "D": "SR10_X_003: risiko pengkreditan/pengembalian PPN tidak sah, diklarifikasi dengan data DJBC"
+    },
+    "answerKey": "D",
+    "explanation": "Klaster peredaran usaha CRM rokok mencakup **SR10_X_003 – PPN Dibayar Dimuka pada SPT Masa PPN tanpa disertai Data Pengembalian/Perusakan Pita Cukai (CK-2/CK-3)**. Kondisi ini mengindikasikan klaim yang tidak didukung dokumen pihak ketiga → risiko kerugian PPN. Treatment: P2DK dengan data pembanding DJBC; bila tidak dapat dijelaskan → usul pemeriksaan.",
+    "whyOthersWrong": "- A — Pengkreditan bergantung pada dukungan dokumen.\n- B, C — Prediktor lain yang tidak sesuai fakta kasus.",
+    "references": "CRM Specific Risk Sektor Rokok (bahan paparan hlm. 742)."
+  },
+  {
+    "number": 57,
+    "id": "P1-057",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "CRM sektor otomotif – prediktor peredaran usaha",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Hasil CRM sektor otomotif untuk PT Roda Prima (populasi Gaikindo) menunjukkan: DPP penyerahan PPN kendaraan bermotor lebih kecil daripada DPP PPh Pasal 22 industri otomotif, dan jumlah unit penjualan menurut faktur pajak lebih kecil dari unit *wholesales* menurut Gaikindo. Interpretasi risiko yang paling tepat adalah ...",
+    "options": {
+      "A": "Risiko kelebihan pengkreditan pajak masukan impor atas komponen kendaraan",
+      "B": "WP patuh karena DPP PPh 22 yang lebih besar menunjukkan kredit pajak tinggi",
+      "C": "Risiko transfer pricing atas pembayaran royalti kepada principal",
+      "D": "Indikasi peredaran usaha tidak dilaporkan seluruhnya; uji dengan data pihak ketiga"
+    },
+    "answerKey": "D",
+    "explanation": "Klaster prediktor **peredaran usaha** CRM otomotif: (1) peredaran usaha SPT PPh < DPP PPh 22 industri otomotif; (2) DPP penyerahan PPN kendaraan < DPP PPh 22; (3) DPP PPN < nilai *wholesales* Gaikindo; (4) unit produksi Gaikindo < unit pembelian komponen; (5) unit penjualan faktur < unit *wholesales* Gaikindo; (6) tidak mengenakan PPN 16D atas penjualan aset. Ketidaksesuaian antar data menunjukkan risiko **penyerahan tidak dilaporkan**.",
+    "whyOthersWrong": "- A — Prediktor yang disebut terkait sisi keluaran, bukan masukan.\n- B — Justru indikasi ketidakpatuhan.\n- C — Royalti termasuk klaster HPP & biaya.",
+    "references": "CRM Specific Risk Sektor Otomotif (bahan paparan hlm. 747–748)."
+  },
+  {
+    "number": 58,
+    "id": "P1-058",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "Risiko royalti afiliasi – tahapan pendahuluan PKKU",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Mesin Nusantara membayar royalti kepada induknya di luar negeri sebesar 6% dari penjualan, sementara rata-rata industri 3%. Penjualan naik 5%, tetapi biaya royalti naik 40%. Dalam P2DK, langkah pengujian pertama yang paling tepat menurut PMK-172/2023 untuk transaksi penggunaan harta tidak berwujud adalah ...",
+    "options": {
+      "A": "Langsung menerapkan metode CUP dengan pembanding tarif royalti industri 3%",
+      "B": "Melakukan tahapan pendahuluan atas keberadaan dan manfaat HTB",
+      "C": "Menganggap seluruh royalti sebagai dividen terselubung tanpa analisis",
+      "D": "Menerapkan metode TNMM dengan induk perusahaan sebagai pihak yang diuji"
+    },
+    "answerKey": "B",
+    "explanation": "Prediktor CRM otomotif menandai \"tarif royalti > rata-rata industri\" dan \"kenaikan biaya royalti > kenaikan peredaran usaha\". Menurut PMK-172/2023 Pasal 13, transaksi hubungan istimewa tertentu (termasuk **penggunaan HTB**) wajib melalui **tahapan pendahuluan** sebelum tahapan PKKU: pembuktian **eksistensi, jenis, nilai, pemilik legal, pemilik ekonomis, penggunaan, pihak yang melakukan DEMPE (development, enhancement, maintenance, protection, exploitation), dan manfaat ekonomis**. Jika WP tidak dapat membuktikannya, transaksi **tidak memenuhi PKKU**.",
+    "whyOthersWrong": "- A — Melompati tahapan pendahuluan dan analisis kesebandingan.\n- C — Tidak berdasar analisis.\n- D — Pihak yang diuji adalah pihak dengan fungsi lebih sederhana (umumnya WP lokal), dan tetap didahului tahapan pendahuluan.",
+    "references": "PMK-172/2023 Pasal 13; CRM sektor otomotif (bahan paparan hlm. 749, 770, 774)."
+  },
+  {
+    "number": 59,
+    "id": "P1-059",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "Treatment DPE berdasarkan tingkat risiko",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "Komite Kepatuhan KPP menetapkan DPE dari Daftar Sasaran Ekstensifikasi (hasil CRM). Tiga sasaran: (1) Tn. Rangga – risiko tinggi, data ILAP penjualan properti Rp5 M; (2) Ny. Sinta – risiko sedang, data kendaraan dan rekening; (3) Sdr. Toni – risiko rendah, pedagang kecil dengan data minim. Treatment yang paling tepat adalah ...",
+    "options": {
+      "A": "Ketiganya diterbitkan SP2DK oleh Tim Ekstensifikasi agar perlakuan seragam",
+      "B": "Ketiganya melalui edukasi oleh penyuluh terlebih dahulu",
+      "C": "(1) langsung pemeriksaan bukti permulaan; (2) SP2DK; (3) diabaikan",
+      "D": "(1) dan (2) dilakukan analisis potensi lalu SP2DK; (3) melalui edukasi oleh penyuluh"
+    },
+    "answerKey": "D",
+    "explanation": "Gambaran umum probis pengawasan WP belum ber-NPWP/belum aktivasi NIK: dari DPE, sasaran **high & medium risk** → analisis/penelitian potensi pajak (EWS, permintaan bantuan penilaian, data pihak ketiga) → SP2DK → monitor tanggapan → SPHP → pembahasan akhir → BAP2DK → LHP2DK. Sasaran **low risk** → **edukasi** (WP yang tidak/belum sepenuhnya memenuhi kewajiban bayar dan lapor tetap dipantau). Ini cerminan prinsip CRM: intensitas treatment sesuai risiko.",
+    "whyOthersWrong": "- A — Tidak efisien bagi risiko rendah.\n- B — Risiko tinggi/sedang memerlukan treatment lebih kuat.\n- C — Bukper memerlukan indikasi pidana; risiko rendah tidak boleh diabaikan.",
+    "references": "Probis Ekstensifikasi (bahan paparan hlm. 782–783)."
+  },
+  {
+    "number": 60,
+    "id": "P1-060",
+    "unit": "7. Analis Profil Risiko Wajib Pajak",
+    "topic": "Prediktor benchmark rasio – CTTOR dan leverage",
+    "difficulty": "Sulit – Studi Kasus",
+    "question": "PT Komponen Indah (anggota grup multinasional) memiliki CTTOR 0,4% (industri 1,5%), *debt to asset ratio* 85% (industri 50%) dengan mayoritas utang dari afiliasi luar negeri, dan laba sebelum pajak jauh di bawah rata-rata grup menurut data CbCR. Kesimpulan analis profil risiko yang paling tepat adalah ...",
+    "options": {
+      "A": "WP berisiko rendah karena rugi atau laba kecil bukan objek pajak",
+      "B": "Risiko utama adalah PPh Pasal 21 atas gaji ekspatriat grup",
+      "C": "Risiko profit shifting dan thin capitalization; uji bunga afiliasi dan TP",
+      "D": "Risiko utama adalah PBB atas pabrik dan gudang komponen"
+    },
+    "answerKey": "C",
+    "explanation": "Prediktor profil CRM otomotif mencakup: laba sebelum pajak WP < rata-rata grup (CbCR), WP masuk grup tertentu (CbCR), signifikansi transaksi afiliasi, **CTTOR WP < CTTOR industri**, indikasi *umbrella agreement*, dan **leverage ratio WP > industri**. Kombinasi rendahnya CTTOR (*Corporate Tax to Turnover Ratio*), *leverage* tinggi dengan utang afiliasi, dan laba di bawah grup → risiko *profit shifting* dan *thin capitalization*. Pengujian: tahapan pendahuluan transaksi keuangan terkait pinjaman (PMK-172/2023 — substansi, kebutuhan, karakteristik pinjaman, manfaat), ketentuan DER (PMK-169/2015), dan kewajaran tingkat bunga.",
+    "whyOthersWrong": "- A — Rugi/laba rendah yang tidak wajar justru indikator risiko.\n- B, D — Tidak didukung prediktor yang disebut.",
+    "references": "CRM Sektor Otomotif – klaster profil & benchmark (bahan paparan hlm. 750–751); PMK-172/2023 Pasal 13."
+  }
+];
+
+    // Application State
+    let currentMode = 'cbt'; // 'cbt' or 'study'
+    let currentQIndex = 0;
+    let userAnswers = {}; // { 1: 'C', 2: 'B', ... }
+    let doubtfulQuestions = {}; // { 1: true, ... }
+    let isExamFinished = false;
+    let allExplanationsOpen = false;
+
+    // Timer State (90 minutes = 5400 seconds)
+    let totalSeconds = 90 * 60;
+    let timerInterval = null;
+    let isTimerPaused = false;
+
+    // Initialize App
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      renderPalette();
+      loadCbtQuestion(0);
+      startTimer();
+      renderStudyMode();
+    });
+
+    // Theme Management
+    function initTheme() {
+      const savedTheme = localStorage.getItem('ukt_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      updateThemeIcons(savedTheme);
+    }
+
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute('data-theme') || 'light';
+      const target = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', target);
+      localStorage.setItem('ukt_theme', target);
+      updateThemeIcons(target);
+    }
+
+    function updateThemeIcons(theme) {
+      document.getElementById('theme-icon-sun').style.display = theme === 'dark' ? 'block' : 'none';
+      document.getElementById('theme-icon-moon').style.display = theme === 'dark' ? 'none' : 'block';
+    }
+
+    // Switch View Mode (CBT vs Study)
+    function setAppMode(mode) {
+      currentMode = mode;
+      document.getElementById('btn-mode-cbt').classList.toggle('active', mode === 'cbt');
+      document.getElementById('btn-mode-study').classList.toggle('active', mode === 'study');
+
+      document.getElementById('cbt-view').style.display = mode === 'cbt' ? 'grid' : 'none';
+      document.getElementById('study-view').style.display = mode === 'study' ? 'flex' : 'none';
+      document.getElementById('study-filter-bar').style.display = mode === 'study' ? 'flex' : 'none';
+
+      if (mode === 'cbt') {
+        loadCbtQuestion(currentQIndex);
+      } else {
+        filterStudyQuestions();
+      }
+    }
+
+    // Timer Logic
+    function startTimer() {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (!isTimerPaused && !isExamFinished) {
+          if (totalSeconds > 0) {
+            totalSeconds--;
+            updateTimerDisplay();
+          } else {
+            clearInterval(timerInterval);
+            finishExam();
+          }
+        }
+      }, 1000);
+    }
+
+    function toggleTimer() {
+      isTimerPaused = !isTimerPaused;
+      document.getElementById('timer-pause-icon').style.display = isTimerPaused ? 'none' : 'block';
+      document.getElementById('timer-play-icon').style.display = isTimerPaused ? 'block' : 'none';
+    }
+
+    function updateTimerDisplay() {
+      const m = Math.floor(totalSeconds / 60);
+      const s = totalSeconds % 60;
+      const el = document.getElementById('timer-display');
+      el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      if (totalSeconds < 600) {
+        el.classList.add('warning');
+      } else {
+        el.classList.remove('warning');
+      }
+    }
+
+    // CBT Palette Grid
+    function renderPalette() {
+      const grid = document.getElementById('palette-grid');
+      grid.innerHTML = '';
+
+      questionsData.forEach((q, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'num-btn';
+        btn.id = 'num-btn-' + idx;
+        btn.textContent = q.number;
+        btn.onclick = () => loadCbtQuestion(idx);
+        grid.appendChild(btn);
+      });
+
+      updatePaletteStatus();
+    }
+
+    function updatePaletteStatus() {
+      questionsData.forEach((q, idx) => {
+        const btn = document.getElementById('num-btn-' + idx);
+        if (!btn) return;
+
+        btn.className = 'num-btn';
+        if (idx === currentQIndex) {
+          btn.classList.add('active');
+        }
+
+        if (isExamFinished) {
+          const userAns = userAnswers[q.number];
+          if (userAns === q.answerKey) {
+            btn.classList.add('review-correct');
+          } else if (userAns && userAns !== q.answerKey) {
+            btn.classList.add('review-wrong');
+          }
+        } else {
+          if (userAnswers[q.number]) {
+            btn.classList.add('answered');
+          }
+          if (doubtfulQuestions[q.number]) {
+            btn.classList.add('doubtful');
+          }
+        }
+      });
+
+      // Update progress stats
+      const answeredCount = Object.keys(userAnswers).length;
+      document.getElementById('stat-answered').textContent = answeredCount;
+      const pct = Math.round((answeredCount / questionsData.length) * 100);
+      document.getElementById('stat-percentage').textContent = pct + '%';
+      document.getElementById('progress-bar-fill').style.width = pct + '%';
+    }
+
+    // Load Single Question in CBT Mode
+    function loadCbtQuestion(idx) {
+      currentQIndex = idx;
+      const q = questionsData[idx];
+      const card = document.getElementById('current-question-card');
+
+      const isDoubtful = !!doubtfulQuestions[q.number];
+      const currentAnswer = userAnswers[q.number] || '';
+
+      const diffClass = q.difficulty.toLowerCase().includes('mudah') ? 'difficulty-mudah' : 'difficulty-sulit';
+
+      let optionsHtml = '';
+      ['A', 'B', 'C', 'D'].forEach(letter => {
+        const text = q.options[letter];
+        let itemClass = 'option-item';
+        
+        if (currentAnswer === letter) {
+          itemClass += ' selected';
+        }
+
+        if (isExamFinished) {
+          if (letter === q.answerKey) {
+            itemClass += ' is-correct';
+          } else if (currentAnswer === letter && currentAnswer !== q.answerKey) {
+            itemClass += ' is-wrong';
+          }
+        }
+
+        optionsHtml += `
+          <div class="${itemClass}" onclick="selectCbtOption(${q.number}, '${letter}')">
+            <div class="opt-letter">${letter}</div>
+            <div class="opt-text">${escapeHtml(text)}</div>
+          </div>
+        `;
+      });
+
+      // Explanation (only visible in review mode or when toggled)
+      let explanationHtml = '';
+      if (isExamFinished) {
+        explanationHtml = `
+          <div class="explanation-box">
+            <div class="exp-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              Pembahasan Lengkap (Kunci: ${q.answerKey})
+            </div>
+            <div class="exp-content">${renderMarkdownText(q.explanation)}</div>
+            ${q.whyOthersWrong ? `
+              <div class="exp-why-wrong">
+                <h5>Mengapa Opsi Lain Kurang Tepat:</h5>
+                <div>${renderMarkdownText(q.whyOthersWrong)}</div>
+              </div>
+            ` : ''}
+            ${q.references ? `
+              <div class="exp-ref">
+                <strong>Dasar Hukum / Referensi:</strong> ${escapeHtml(q.references)}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      card.innerHTML = `
+        <div class="q-header">
+          <div>
+            <div class="q-number-title">
+              <span>Soal Nomor ${q.number}</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">(ID: ${q.id})</span>
+            </div>
+          </div>
+          <div class="q-meta-badges">
+            <span class="meta-tag ${diffClass}">${q.difficulty}</span>
+            <span class="meta-tag">${q.unit}</span>
+          </div>
+        </div>
+
+        <div class="q-topic">
+          <span>Topik: <strong>${escapeHtml(q.topic)}</strong></span>
+        </div>
+
+        <div class="q-text">${escapeHtml(q.question)}</div>
+
+        <div class="options-list">
+          ${optionsHtml}
+        </div>
+
+        ${explanationHtml}
+
+        <div class="cbt-nav-controls">
+          <button class="btn btn-secondary" onclick="loadCbtQuestion(${Math.max(0, idx - 1)})" ${idx === 0 ? 'disabled' : ''}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            Sebelumnya
+          </button>
+
+          <button class="btn ${isDoubtful ? 'btn-accent' : 'btn-secondary'}" onclick="toggleDoubtful(${q.number})">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            ${isDoubtful ? 'Batal Ragu-ragu' : 'Tandai Ragu-ragu'}
+          </button>
+
+          <button class="btn btn-primary" onclick="loadCbtQuestion(${Math.min(questionsData.length - 1, idx + 1)})" ${idx === questionsData.length - 1 ? 'disabled' : ''}>
+            Berikutnya
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      `;
+
+      updatePaletteStatus();
+    }
+
+    // Select Option in CBT
+    function selectCbtOption(qNum, letter) {
+      if (isExamFinished) return; // Locked during review
+      userAnswers[qNum] = letter;
+      loadCbtQuestion(currentQIndex);
+      updatePaletteStatus();
+    }
+
+    // Toggle Doubtful
+    function toggleDoubtful(qNum) {
+      if (isExamFinished) return;
+      doubtfulQuestions[qNum] = !doubtfulQuestions[qNum];
+      loadCbtQuestion(currentQIndex);
+      updatePaletteStatus();
+    }
+
+    // Finish Exam & Confirmation
+    function confirmFinishExam() {
+      const answeredCount = Object.keys(userAnswers).length;
+      const unAnswered = questionsData.length - answeredCount;
+      const doubtfulCount = Object.values(doubtfulQuestions).filter(Boolean).length;
+
+      let msg = `Apakah Anda yakin ingin mengakhiri ujian?
+
+- Terjawab: ${answeredCount}
+- Belum Terjawab: ${unAnswered}`;
+      if (doubtfulCount > 0) {
+        msg += `
+- Masih Ragu-ragu: ${doubtfulCount}`;
+      }
+
+      if (confirm(msg)) {
+        finishExam();
+      }
+    }
+
+    function finishExam() {
+      isExamFinished = true;
+      clearInterval(timerInterval);
+
+      let correct = 0;
+      let wrong = 0;
+      let empty = 0;
+
+      questionsData.forEach(q => {
+        const ans = userAnswers[q.number];
+        if (!ans) {
+          empty++;
+        } else if (ans === q.answerKey) {
+          correct++;
+        } else {
+          wrong++;
+        }
+      });
+
+      // Score calculation: 60 questions converted to 0 - 100 scale
+      const score = Math.round((correct / questionsData.length) * 100);
+
+      document.getElementById('modal-score').textContent = score;
+      document.getElementById('modal-correct').textContent = correct;
+      document.getElementById('modal-wrong').textContent = wrong;
+      document.getElementById('modal-empty').textContent = empty;
+
+      document.getElementById('result-modal').classList.add('active');
+      document.getElementById('review-mode-badge').textContent = '• Mode Review';
+      document.getElementById('review-mode-badge').style.color = 'var(--primary)';
+
+      loadCbtQuestion(currentQIndex);
+      updatePaletteStatus();
+    }
+
+    function closeModalAndReview() {
+      document.getElementById('result-modal').classList.remove('active');
+    }
+
+    function resetExam() {
+      if (confirm('Ulangi ujian simulasi dari awal? Semua jawaban Anda akan direset.')) {
+        userAnswers = {};
+        doubtfulQuestions = {};
+        isExamFinished = false;
+        totalSeconds = 90 * 60;
+        isTimerPaused = false;
+        document.getElementById('result-modal').classList.remove('active');
+        document.getElementById('review-mode-badge').textContent = '';
+        renderPalette();
+        loadCbtQuestion(0);
+        startTimer();
+      }
+    }
+
+    // Study Mode Rendering
+    function renderStudyMode() {
+      const container = document.getElementById('study-view');
+      container.innerHTML = '';
+
+      questionsData.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'study-card';
+        card.id = 'study-card-' + q.number;
+
+        const diffClass = q.difficulty.toLowerCase().includes('mudah') ? 'difficulty-mudah' : 'difficulty-sulit';
+
+        let optionsHtml = '';
+        ['A', 'B', 'C', 'D'].forEach(letter => {
+          const isKey = letter === q.answerKey;
+          optionsHtml += `
+            <div class="option-item study-opt-${q.number}" id="study-opt-${q.number}-${letter}" onclick="checkStudyOption(${q.number}, '${letter}', '${q.answerKey}')">
+              <div class="opt-letter">${letter}</div>
+              <div class="opt-text">${escapeHtml(q.options[letter])}</div>
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="q-header">
+            <div>
+              <div class="q-number-title">
+                <span>Soal Nomor ${q.number}</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">(ID: ${q.id})</span>
+              </div>
+            </div>
+            <div class="q-meta-badges">
+              <span class="meta-tag ${diffClass}">${q.difficulty}</span>
+              <span class="meta-tag">${q.unit}</span>
+            </div>
+          </div>
+
+          <div class="q-topic">
+            <span>Topik: <strong>${escapeHtml(q.topic)}</strong></span>
+          </div>
+
+          <div class="q-text">${escapeHtml(q.question)}</div>
+
+          <div class="options-list">
+            ${optionsHtml}
+          </div>
+
+          <button class="btn btn-secondary" onclick="toggleStudyExplanation(${q.number})" style="margin-bottom: 0.75rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span id="btn-study-exp-${q.number}">Tampilkan Kunci & Pembahasan</span>
+          </button>
+
+          <div class="explanation-box" id="study-exp-${q.number}" style="display: none;">
+            <div class="exp-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Kunci Jawaban: ${q.answerKey}
+            </div>
+            <div class="exp-content">${renderMarkdownText(q.explanation)}</div>
+            ${q.whyOthersWrong ? `
+              <div class="exp-why-wrong">
+                <h5>Mengapa Opsi Lain Kurang Tepat:</h5>
+                <div>${renderMarkdownText(q.whyOthersWrong)}</div>
+              </div>
+            ` : ''}
+            ${q.references ? `
+              <div class="exp-ref">
+                <strong>Dasar Hukum / Referensi:</strong> ${escapeHtml(q.references)}
+              </div>
+            ` : ''}
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function checkStudyOption(qNum, selectedLetter, correctKey) {
+      const allOpts = document.querySelectorAll('.study-opt-' + qNum);
+      allOpts.forEach(el => {
+        el.classList.remove('is-correct', 'is-wrong', 'selected');
+      });
+
+      const selectedEl = document.getElementById('study-opt-' + qNum + '-' + selectedLetter);
+      const correctEl = document.getElementById('study-opt-' + qNum + '-' + correctKey);
+
+      if (selectedLetter === correctKey) {
+        selectedEl.classList.add('is-correct');
+      } else {
+        selectedEl.classList.add('is-wrong');
+        correctEl.classList.add('is-correct');
+      }
+
+      // Automatically reveal explanation
+      const expBox = document.getElementById('study-exp-' + qNum);
+      if (expBox) {
+        expBox.style.display = 'block';
+        document.getElementById('btn-study-exp-' + qNum).textContent = 'Sembunyikan Kunci & Pembahasan';
+      }
+    }
+
+    function toggleStudyExplanation(qNum) {
+      const expBox = document.getElementById('study-exp-' + qNum);
+      const btnTxt = document.getElementById('btn-study-exp-' + qNum);
+      if (expBox.style.display === 'none') {
+        expBox.style.display = 'block';
+        btnTxt.textContent = 'Sembunyikan Kunci & Pembahasan';
+      } else {
+        expBox.style.display = 'none';
+        btnTxt.textContent = 'Tampilkan Kunci & Pembahasan';
+      }
+    }
+
+    function toggleAllExplanations() {
+      allExplanationsOpen = !allExplanationsOpen;
+      questionsData.forEach(q => {
+        const expBox = document.getElementById('study-exp-' + q.number);
+        const btnTxt = document.getElementById('btn-study-exp-' + q.number);
+        if (expBox && btnTxt) {
+          expBox.style.display = allExplanationsOpen ? 'block' : 'none';
+          btnTxt.textContent = allExplanationsOpen ? 'Sembunyikan Kunci & Pembahasan' : 'Tampilkan Kunci & Pembahasan';
+        }
+      });
+      document.getElementById('toggle-all-exp-txt').textContent = allExplanationsOpen ? 'Tutup Semua Kunci' : 'Buka Semua Kunci';
+    }
+
+    // Filter Search in Study Mode
+    function filterStudyQuestions() {
+      const searchVal = document.getElementById('search-box').value.toLowerCase();
+      const unitVal = document.getElementById('filter-unit').value;
+      const diffVal = document.getElementById('filter-difficulty').value;
+
+      questionsData.forEach(q => {
+        const card = document.getElementById('study-card-' + q.number);
+        if (!card) return;
+
+        let matchSearch = true;
+        if (searchVal) {
+          const haystack = (q.number + ' ' + q.id + ' ' + q.question + ' ' + q.topic + ' ' + q.unit + ' ' + q.explanation + ' ' + q.references).toLowerCase();
+          matchSearch = haystack.includes(searchVal);
+        }
+
+        let matchUnit = true;
+        if (unitVal) {
+          matchUnit = q.unit.toLowerCase().includes(unitVal.toLowerCase());
+        }
+
+        let matchDiff = true;
+        if (diffVal) {
+          matchDiff = q.difficulty.toLowerCase().includes(diffVal.toLowerCase());
+        }
+
+        if (matchSearch && matchUnit && matchDiff) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Utility text formatters
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderMarkdownText(text) {
+      if (!text) return '';
+      let escaped = escapeHtml(text);
+      // bold **text**
+      escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      // italic *text*
+      escaped = escaped.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      // line breaks
+      escaped = escaped.replace(/\n/g, '<br>');
+      return escaped;
+    }
+  </script>
+</body>
+</html>
